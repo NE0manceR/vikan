@@ -1,0 +1,171 @@
+.mobileMenuWrap {
+  width: 279px;
+  background-color: F5F6FA;
+  height: 100vh;
+  position: absolute;
+  left: -280px;
+  top: 0;
+  z-index: 9999;
+  top: -48px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.test {
+  width: 279px;
+  background-color: #F5F6FA;
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  z-index: 9999;
+  top: -48px;
+  transition: 0.3s;
+  overflow: hidden;
+
+}
+
+.emailWrap {
+  height: 48px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: #0F61FD;
+
+
+  div {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 20px;
+  }
+
+  img {
+    justify-self: end;
+  }
+
+  a {
+    align-self: center;
+    color: white;
+    text-decoration: none;
+
+  }
+}
+
+.menuClose {
+  height: 48px;
+  padding-left: 15px;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 36px;
+  align-content: center;
+  background-color: white;
+
+  svg {
+    align-self: center;
+  }
+
+}
+
+.leftMenuBtn .bx--btn {
+  height: 32px;
+  width: 140px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  min-height: 1rem;
+  padding: 0;
+  display: grid;
+  justify-content: center;
+}
+
+.menuList {
+  padding-top: 16px;
+  overflow: none;
+  text-decoration: none;
+  color: #161616;
+  cursor:pointer;
+}
+
+.itemWrap {
+
+  position: relative;
+  height: 40px;
+  padding-left: 20px;
+  display: grid;
+  cursor:pointer;
+  align-items: center;
+
+  a {
+    color: #161616;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.313rem;
+    display: grid;
+    height: 100%;
+    align-content: center;
+    overflow: none;
+
+  }
+
+  span:after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #E0E0E0;;
+    width: 100%;
+    top: 40px;
+    left: 6%;
+    width: 87%
+
+  }
+}
+
+.catalogLink {
+  display: grid;
+  grid-template-columns: 1fr 33px;
+}
+
+.hideCatalog {
+  padding-top: 31px;
+  height: 100%;
+  width: 279px;
+  background-color: white;
+  position: absolute;
+  left: 280px;
+  transition: 0.3s;
+  z-index: 4;
+}
+
+.showCatalog {
+  padding-top: 31px;
+  height: 100%;
+  width: 279px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+  z-index: 4;
+
+}
+
+.catalogItem {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+
+  svg {
+    transform: rotate(180deg);
+  }
+
+  span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.313rem;
+    color: #0F61FD;
+
+  }
+}
+
+

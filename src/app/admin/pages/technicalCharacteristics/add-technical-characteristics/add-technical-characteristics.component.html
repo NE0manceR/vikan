@@ -1,0 +1,864 @@
+<form [formGroup]="myForm" class="form-group">
+
+  <!-- <mat-form-field [hidden]="true" >
+        <input [hidden]="true" matInput type="number" formControlName="id" >
+    </mat-form-field> -->
+  <mat-label>Одиниця каталога :</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_type_desc" placeholder="UA : Подрібнювач...">
+  </mat-form-field>
+  <br><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_type_desc" placeholder="ENG : Shredder...">
+  </mat-form-field>
+  <br><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_type_desc" placeholder="RUS : Измельчитель...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Модель :</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="name" placeholder=" VA 5b...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Опис моделі :</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_description" placeholder="UA : обладнанням для подрібнення...">
+  </mat-form-field>
+  <br><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_description" placeholder="ENG : grinding equipment...">
+  </mat-form-field>
+  <br><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_description" placeholder="RUS : оборудованием для измельчения...">
+  </mat-form-field>
+  <br><br>
+
+  <div *ngIf="ImgPhoto">
+    <mat-label class="foto"> Фото :</mat-label>
+    <br><br>
+    <div>
+      <div class="panel-body">
+        <img src="{{urlToServer}}api/files/{{ImgPhoto}}" width="20%" class="foto">
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="foto">
+    <ng-container *ngIf="ImgPhoto; else content" for="file-upload">Змінити фото :</ng-container>
+    <ng-template #content>
+      <label for="file-upload">Добавити Головне Фото :</label>
+    </ng-template>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary">
+        <input type="file" id="file-upload" accept="image/*" (change)="selectPhoto($event)" />
+        <label for="file-upload">Завантажити</label>
+        <div id="file-upload-filename"></div>
+      </button>
+
+      <div *ngIf="previewPhotoImg">
+        <img [src]="previewPhotoImg" width="30%" />
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div *ngIf="ImgTech">
+    <mat-label class="foto">Технічне Фото :</mat-label>
+    <br><br>
+    <div>
+      <div class="panel-body">
+        <img src="{{urlToServer}}api/files/{{ImgTech}}" width="20%" class="foto">
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="foto">
+    <ng-container *ngIf="ImgTech; else contentT" for="file-uploadT">Змінити фото :</ng-container>
+    <ng-template #contentT>
+      <label for="file-uploadT">Добавити Технічне Фото :</label>
+    </ng-template>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary">
+        <input type="file" id="file-uploadT" accept="image/*" (change)="selectTech($event)" />
+        <label for="file-uploadT">Завантажити</label>
+        <div id="file-uploadT-filename"></div>
+      </button>
+
+      <div *ngIf="previewTechImg">
+        <img [src]="previewTechImg" width="30%" />
+      </div>
+    </div>
+
+  </div>
+  <br><br><br>
+
+
+  <mat-label>Тип машини :</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_type_machine" placeholder="UA : На гусеничному ходу...">
+  </mat-form-field>
+  <br><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_type_machine" placeholder="ENG : On the caterpillar course...">
+  </mat-form-field>
+  <br><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_type_machine" placeholder="RUS : На гусеничном ходу...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Продуктивність, м3/год :</mat-label><br><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_productivity" placeholder="UA : До 50...">
+  </mat-form-field>
+  <br><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_productivity" placeholder="ENG : Up to 50...">
+  </mat-form-field>
+  <br><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_productivity" placeholder="RUS : до 50...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Мотор :</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="motor" placeholder=" Мотор...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Потужність :</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="power" placeholder=" Потужність...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Обороти холості, об/хв :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="idle_speed" placeholder=" об/хв...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Обороти робочі, об/хв :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="working_speed" placeholder=" об/хв...">
+  </mat-form-field>
+  <br><br>
+
+
+  <mat-label>Тип :</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_type_node" placeholder="UA : Вали та сита...">
+  </mat-form-field>
+  <br><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_type_node" placeholder="ENG : It's raining and full...">
+  </mat-form-field>
+  <br><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_type_node" placeholder="RUS : Валы и сита...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Кількість обертів в автоматичному режимі без матеріалу, об/хв :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="automatic_no_material" placeholder=" об/хв...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Діаметр вала,мм :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="shaft_diameter" placeholder=" мм...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Габаритні розміри в робочому положенні :</mat-label><br>
+  <mat-label>Довжина,мм :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="lenght_work" placeholder=" мм...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Висота,мм :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="height_work" placeholder=" мм...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Ширина,мм :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="width_work" placeholder=" мм...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Габаритні розміри в транспортному положенні :</mat-label><br>
+  <mat-label>Довжина,мм :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="lenght_transport" placeholder=" мм...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Висота,мм :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="height_transport" placeholder=" мм...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Ширина,мм :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="width_transport" placeholder=" мм...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Об'єм гідросистеми, л :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="volume_hydraulic" placeholder=" л...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Максимальний тиск в гідросистемі, бар :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="max_pressure_hydraulic" placeholder=" бар...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Розмір отворів сита, мм :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="size_sieve_holes" placeholder=" мм...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Розмір вихідної фракції матеріалу, мм :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="size_org_fraction" placeholder=" мм...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Відсоток вихідної фракції матеріалу,що виходить за межі, % :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="interest_fraction_out" placeholder=" %...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Маса виробу, т :</mat-label><br>
+  <mat-form-field>
+    <input type="number" matInput formControlName="product_mass" placeholder=" т...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Опис що знаходиться під характеристиками моделі :</mat-label><br><br>
+
+  <mat-label>Заголовок 1 UA:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_desc_title1" placeholder="Ударна витривалість...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Заголовок 1 ENG:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_desc_title1" placeholder="Impact resistance...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Заголовок 1 RUS:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_desc_title1" placeholder="ударная прочность...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Поле під заголовком 1 UA:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_desc_under_title1" placeholder="...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Поле під заголовком 1 ENG:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_desc_under_title1" placeholder="...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Поле під заголовком 1 RUS:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_desc_under_title1" placeholder="...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Опис Заголовка 1 UA:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="ua_desc_description1"
+      placeholder="це універсальний двохва..."></textarea>
+  </mat-form-field>
+  <br><br>
+  <mat-label>Опис Заголовка 1 ENG:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="eng_desc_description1"
+      placeholder="it is a universal two..."></textarea>
+  </mat-form-field>
+  <br><br>
+  <mat-label>Опис Заголовка 1 RUS:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="rus_desc_description1"
+      placeholder="это универсальный двохва..."></textarea>
+  </mat-form-field>
+  <br><br>
+
+
+  <mat-label>Заголовок 2 UA:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_desc_title2" placeholder="Ударна витривалість...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Заголовок 2 ENG:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_desc_title2" placeholder="Impact resistance...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Заголовок 2 RUS:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_desc_title2" placeholder="ударная прочность...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Поле під заголовком 2 UA:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_desc_under_title2" placeholder="Вали...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Поле під заголовком 2 ENG:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_desc_under_title2" placeholder="billow...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Поле під заголовком 2 RUS:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_desc_under_title2" placeholder="валы...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Опис Заголовка 2 UA:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="ua_desc_description2"
+      placeholder="це універсальний двохва..."></textarea>
+  </mat-form-field>
+  <br><br>
+  <mat-label>Опис Заголовка 2 ENG:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="eng_desc_description2"
+      placeholder="it is a universal two..."></textarea>
+  </mat-form-field>
+  <br><br>
+  <mat-label>Опис Заголовка 2 RUS:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="rus_desc_description2"
+      placeholder="это универсальный двохва..."></textarea>
+  </mat-form-field>
+  <br><br>
+
+
+  <mat-label>Заголовок 3 UA:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_desc_title3" placeholder="Ударна витривалість...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Заголовок 3 ENG:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_desc_title3" placeholder="Impact resistance...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Заголовок 3 RUS:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_desc_title3" placeholder="ударная прочность...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Поле під заголовком 3 UA:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_desc_under_title3" placeholder="це універсальний двохва...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Поле під заголовком 3 ENG:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_desc_under_title3" placeholder="it is a universal two...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Поле під заголовком 3 RUS:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_desc_under_title3" placeholder="это универсальный двохва...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Опис Заголовка 3 UA:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="ua_desc_description3"
+      placeholder="це універсальний двохва..."></textarea>
+  </mat-form-field>
+  <br><br>
+  <mat-label>Опис Заголовка 3 ENG:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="eng_desc_description3"
+      placeholder="it is a universal two..."></textarea>
+  </mat-form-field>
+  <br><br>
+  <mat-label>Опис Заголовка 3 RUS:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="rus_desc_description3"
+      placeholder="это универсальный двохва..."></textarea>
+  </mat-form-field>
+  <br><br>
+
+
+
+
+  <mat-label>Заголовок 4 UA:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_desc_title4" placeholder="Ударна витривалість...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Заголовок 4 ENG:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_desc_title4" placeholder="Impact resistance...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Заголовок 4 RUS:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_desc_title4" placeholder="ударная прочность...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Поле під заголовком 4 UA:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_desc_under_title4" placeholder="це універсальний двохва...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Поле під заголовком 4 ENG:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_desc_under_title4" placeholder="it is a universal two...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Поле під заголовком 4 RUS:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_desc_under_title4" placeholder="это универсальный двохва...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Опис Заголовка 4 UA:</mat-label><br><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="ua_desc_description4"
+      placeholder="це універсальний двохва..."></textarea>
+  </mat-form-field>
+  <br><br>
+  <mat-label>Опис Заголовка 4 ENG:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="eng_desc_description4"
+      placeholder="it is a universal two..."></textarea>
+  </mat-form-field>
+  <br><br>
+  <mat-label>Опис Заголовка 4 RUS:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="rus_desc_description4"
+      placeholder="это универсальный двохва..."></textarea>
+  </mat-form-field>
+  <br><br>
+
+
+  <mat-label>Заголовок 5 UA:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_desc_title5" placeholder="Ударна витривалість...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Заголовок 5 ENG:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_desc_title5" placeholder="Impact resistance...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Заголовок 5 RUS:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_desc_title5" placeholder="ударная прочность...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Поле під заголовком 5 UA:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="ua_desc_under_title5" placeholder="це універсальний двохва...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Поле під заголовком 5 ENG:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="eng_desc_under_title5" placeholder="it is a universal two...">
+  </mat-form-field>
+  <br><br>
+  <mat-label>Поле під заголовком 5 RUS:</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="rus_desc_under_title5" placeholder="это универсальный двохва...">
+  </mat-form-field>
+  <br><br>
+
+  <mat-label>Опис Заголовка 5 UA:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="ua_desc_description5"
+      placeholder="це універсальний двохва..."></textarea>
+  </mat-form-field>
+  <br><br>
+  <mat-label>Опис Заголовка 5 ENG:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="eng_desc_description5"
+      placeholder="it is a universal two..."></textarea>
+  </mat-form-field>
+  <br><br>
+  <mat-label>Опис Заголовка 5 RUS:</mat-label><br>
+  <mat-form-field>
+    <textarea type="text" matInput formControlName="rus_desc_description5"
+      placeholder="это универсальный двохва..."></textarea>
+  </mat-form-field>
+
+
+
+
+  <br><br><br>
+  <mat-label>Сировина 1:</mat-label><br><br>
+  <mat-select formControlName="raw_id1" class="rawValue" (change)="changeRaw($event.value)">
+    <mat-option *ngFor="let r of rawList" [value]="r.id">
+      {{r.ua_name}}
+    </mat-option>
+  </mat-select>
+  <br><br>
+  <mat-label>Сировина 2:</mat-label><br><br>
+  <mat-select formControlName="raw_id2" class="rawValue" (change)="changeRaw($event.value)">
+    <mat-option *ngFor="let r of rawList" [value]="r.id">
+      {{r.ua_name}}
+    </mat-option>
+  </mat-select>
+  <br><br>
+  <mat-label>Сировина 3:</mat-label><br><br>
+  <mat-select formControlName="raw_id3" class="rawValue" (change)="changeRaw($event.value)">
+    <mat-option *ngFor="let r of rawList" [value]="r.id">
+      {{r.ua_name}}
+    </mat-option>
+  </mat-select>
+  <br><br><br><br>
+
+  <div *ngIf="photoGallery1">
+    <mat-label class="foto">Галерея Фото 1 :</mat-label>
+    <br><br>
+    <div>
+      <div class="panel-body">
+        <img src="{{urlToServer}}api/files/{{photoGallery1}}" width="20%" class="foto">
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="foto">
+    <ng-container *ngIf="photoGallery1; else content1" for="file-uploadG1">Змінити фото :</ng-container>
+    <ng-template #content1>
+      <label for="file-uploadG1">Добавити Фото 1 (Галарея) :</label>
+    </ng-template>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary">
+        <input type="file" id="file-uploadG1" accept="image/*" (change)="selectG1($event)" />
+        <label for="file-uploadG1">Завантажити</label>
+        <div id="file-uploadG1-filename"></div>
+      </button>
+
+      <div *ngIf="previewPhotoG1">
+        <img [src]="previewPhotoG1" width="30%" />
+      </div>
+    </div>
+
+  </div>
+  <br><br>
+
+  <div *ngIf="photoGallery2">
+    <mat-label class="foto">Галерея Фото 2 :</mat-label>
+    <br><br>
+    <div>
+      <div class="panel-body">
+        <img src="{{urlToServer}}api/files/{{photoGallery2}}" width="20%" class="foto">
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="foto">
+    <ng-container *ngIf="photoGallery2; else content2" for="file-uploadG2">Змінити фото :</ng-container>
+    <ng-template #content2>
+      <label for="file-uploadG2">Добавити Фото 2 (Галарея) :</label>
+    </ng-template>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary">
+        <input type="file" id="file-uploadG2" accept="image/*" (change)="selectG2($event)" />
+        <label for="file-uploadG2">Завантажити</label>
+        <div id="file-uploadG2-filename"></div>
+      </button>
+
+      <div *ngIf="previewPhotoG2">
+        <img [src]="previewPhotoG2" width="30%" />
+      </div>
+    </div>
+
+  </div>
+  <br><br>
+
+  <div *ngIf="photoGallery3">
+    <mat-label class="foto">Галерея Фото 3 :</mat-label>
+    <br><br>
+    <div>
+      <div class="panel-body">
+        <img src="{{urlToServer}}api/files/{{photoGallery3}}" width="20%" class="foto">
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="foto">
+    <ng-container *ngIf="photoGallery3; else content3" for="file-uploadG3">Змінити фото :</ng-container>
+    <ng-template #content3>
+      <label for="file-uploadG3">Добавити Фото 3 (Галарея) :</label>
+    </ng-template>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary">
+        <input type="file" id="file-uploadG3" accept="image/*" (change)="selectG3($event)" />
+        <label for="file-uploadG3">Завантажити</label>
+        <div id="file-uploadG3-filename"></div>
+      </button>
+
+      <div *ngIf="previewPhotoG3">
+        <img [src]="previewPhotoG3" width="30%" />
+      </div>
+    </div>
+
+  </div>
+  <br><br>
+
+  <div *ngIf="photoGallery4">
+    <mat-label class="foto">Галерея Фото 4 :</mat-label>
+    <br><br>
+    <div>
+      <div class="panel-body">
+        <img src="{{urlToServer}}api/files/{{photoGallery4}}" width="20%" class="foto">
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="foto">
+    <ng-container *ngIf="photoGallery4; else content4" for="file-uploadG4">Змінити фото :</ng-container>
+    <ng-template #content4>
+      <label for="file-uploadG4">Добавити Фото 4 (Галарея) :</label>
+    </ng-template>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary">
+        <input type="file" id="file-uploadG4" accept="image/*" (change)="selectG4($event)" />
+        <label for="file-uploadG4">Завантажити</label>
+        <div id="file-uploadG4-filename"></div>
+      </button>
+
+      <div *ngIf="previewPhotoG4">
+        <img [src]="previewPhotoG4" width="30%" />
+      </div>
+    </div>
+
+  </div>
+  <br><br>
+
+  <div *ngIf="photoGallery5">
+    <mat-label class="foto">Галерея Фото 5 :</mat-label>
+    <br><br>
+    <div>
+      <div class="panel-body">
+        <img src="{{urlToServer}}api/files/{{photoGallery5}}" width="20%" class="foto">
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="foto">
+    <ng-container *ngIf="photoGallery5; else content5" for="file-uploadG5">Змінити фото :</ng-container>
+    <ng-template #content5>
+      <label for="file-uploadG5">Добавити Фото 5 (Галарея) :</label>
+    </ng-template>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary">
+        <input type="file" id="file-uploadG5" accept="image/*" (change)="selectG5($event)" />
+        <label for="file-uploadG5">Завантажити</label>
+        <div id="file-uploadG5-filename"></div>
+      </button>
+
+      <div *ngIf="previewPhotoG5">
+        <img [src]="previewPhotoG5" width="30%" />
+      </div>
+    </div>
+
+  </div>
+  <br><br>
+
+  <div *ngIf="photoGallery6">
+    <mat-label class="foto">Галерея Фото 6 :</mat-label>
+    <br><br>
+    <div>
+      <div class="panel-body">
+        <img src="{{urlToServer}}api/files/{{photoGallery6}}" width="20%" class="foto">
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="foto">
+    <ng-container *ngIf="photoGallery6; else content6" for="file-uploadG6">Змінити фото :</ng-container>
+    <ng-template #content6>
+      <label for="file-uploadG6">Добавити Фото 6 (Галарея) :</label>
+    </ng-template>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary">
+        <input type="file" id="file-uploadG6" accept="image/*" (change)="selectG6($event)" />
+        <label for="file-uploadG6">Завантажити</label>
+        <div id="file-uploadG6-filename"></div>
+      </button>
+
+      <div *ngIf="previewPhotoG6">
+        <img [src]="previewPhotoG6" width="30%" />
+      </div>
+    </div>
+
+  </div>
+  <br><br>
+
+  <div *ngIf="photoGallery7">
+    <mat-label class="foto">Галерея Фото 7 :</mat-label>
+    <br><br>
+    <div>
+      <div class="panel-body">
+        <img src="{{urlToServer}}api/files/{{photoGallery7}}" width="20%" class="foto">
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="foto">
+    <ng-container *ngIf="photoGallery7; else content7" for="file-uploadG7">Змінити фото :</ng-container>
+    <ng-template #content7>
+      <label for="file-uploadG7">Добавити Фото 7 (Галарея) :</label>
+    </ng-template>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary">
+        <input type="file" id="file-uploadG7" accept="image/*" (change)="selectG7($event)" />
+        <label for="file-uploadG7">Завантажити</label>
+        <div id="file-uploadG7-filename"></div>
+      </button>
+
+      <div *ngIf="previewPhotoG7">
+        <img [src]="previewPhotoG7" width="30%" />
+      </div>
+    </div>
+
+  </div>
+  <br><br>
+
+  <div *ngIf="photoGallery8">
+    <mat-label class="foto">Галерея Фото 8 :</mat-label>
+    <br><br>
+    <div>
+      <div class="panel-body">
+        <img src="{{urlToServer}}api/files/{{photoGallery8}}" width="20%" class="foto">
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="foto">
+    <ng-container *ngIf="photoGallery8; else content8" for="file-uploadG8">Змінити фото :</ng-container>
+    <ng-template #content8>
+      <label for="file-uploadG8">Добавити Фото 8 (Галарея) :</label>
+    </ng-template>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary">
+        <input type="file" id="file-uploadG8" accept="image/*" (change)="selectG8($event)" />
+        <label for="file-uploadG8">Завантажити</label>
+        <div id="file-uploadG8-filename"></div>
+      </button>
+
+      <div *ngIf="previewPhotoG8">
+        <img [src]="previewPhotoG8" width="30%" />
+      </div>
+    </div>
+
+  </div>
+  <br><br>
+
+
+  <mat-label>Посилання на відео , url :</mat-label><br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="video_url" placeholder=" url...">
+  </mat-form-field>
+  <br><br>
+
+
+  <!-- <ng-container *ngIf="Rating; else contentR" for="rat"></ng-container> -->
+  <mat-label *ngIf="Rating; else contentR" for="rat"> Змінити рейтинг :</mat-label><br>
+  <ng-template #contentR>
+    <mat-label for="rat">Рейтинг моделі: </mat-label>
+  </ng-template>
+  <mat-form-field>
+    <input id="rat" type="number" matInput formControlName="rating" placeholder=" 0...">
+  </mat-form-field>
+  <br><br>
+
+  <div *ngIf="PDF">
+    <mat-label class="foto">PDF :</mat-label>
+    <br><br>
+    <div>
+      <div class="panel-body">
+        <p>{{PDF}}</p>
+        <p><a href="{{urlToServer}}api/files/{{PDF}}" download>Скачати файл</a></p>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="foto">
+    <ng-container *ngIf="PDF; else contentPDF" for="filePDF">Змінити PDF :</ng-container>
+    <ng-template #contentPDF>
+      <label for="filePDF">Добавити PDF :</label>
+    </ng-template>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary">
+        <input type="file" id="filePDF" accept="application/pdf" (change)="selectPDF($event)" />
+        <label for="filePDF">Завантажити</label>
+
+      </button>
+      <div id="filePDF-filename"></div>
+
+      <div *ngIf="previewPDFile">
+        <p>{{previewPDFile}}</p>
+        <p><a href="{{urlToServer}}api/files/{{previewPDFile}}" download>Скачати файл</a></p>
+      </div>
+
+    </div>
+
+  </div>
+  <br><br>
+
+
+
+  <br><br>
+
+  <div>
+    <div class="fin">
+
+      <button type="button" mat-raised-button color="accent" (click)="onNoClick()">Скасувати</button>
+      <button type="submit" [disabled]="myForm.invalid" mat-raised-button color="primary"
+        (click)="confirmAdd()">Зберегти</button>
+    </div>
+  </div>
+
+</form>

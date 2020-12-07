@@ -1,0 +1,81 @@
+<h3 class="title">Переглянути :</h3>
+<br /><br />
+
+<form [formGroup]="myForm" novalidate>
+  <!-- <div [formGroup]="myForm">
+      <input type="hidden" class="form-control" formControlName="id">
+    </div> -->
+  <div [formGroup]="myForm">
+    <h5>name :</h5>
+    <p>{{ myForm.get("name").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>phone :</h5>
+    <p>{{ myForm.get("phone").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>email :</h5>
+    <p>{{ myForm.get("email").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>theme :</h5>
+    <p>{{ myForm.get("theme").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>message :</h5>
+    <p>{{ myForm.get("message").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>country :</h5>
+    <p>{{ myForm.get("country").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>street :</h5>
+    <p>{{ myForm.get("street").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>company :</h5>
+    <p>{{ myForm.get("company").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>city :</h5>
+    <p>{{ myForm.get("city").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>post :</h5>
+    <p>{{ myForm.get("post").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>Отримано :</h5>
+    <p>{{ myForm.get("createdAt").value | date: "dd-MM-yyyy/HH:mm " }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>Розглянуто :</h5>
+    <p *ngIf="block">{{ block }}</p>
+    <p *ngIf="updatedAt">
+      {{ myForm.get("updatedAt").value | date: "dd-MM-yyyy/HH:mm " }}
+    </p>
+  </div>
+  <br />
+
+  <br /><br />
+
+  <div class="form-group row">
+    <div class="fin">
+      <button type="button" mat-raised-button color="accent" (click)="Close()">
+        Закрити
+      </button>
+    </div>
+  </div>
+</form>

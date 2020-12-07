@@ -1,0 +1,150 @@
+<div (window:load)="resetUnderline()" class="bcg-color">
+  <div class="bx--grid">
+
+    <div class="crumb-position">
+      <ibm-breadcrumb noTrailingSlash="noTrailingSlash">
+        <ibm-breadcrumb-item >
+          <a class="breadcrumb-link-style" routerLink="/">{{"crumb.main" | translate}}</a>
+        </ibm-breadcrumb-item>
+        <ibm-breadcrumb-item current="true">
+        {{"raw.crumb" | translate}}
+        </ibm-breadcrumb-item>
+      </ibm-breadcrumb>
+    </div>
+
+    <p class="row-title">{{"raw.title" | translate}}</p>
+
+    <div class="mobileLinkWrap">
+      <div class="link-wrap">
+        <div class="btnWrap" (click)="testFunction($event);changeContent($event)">
+          <span class="rawLink">{{"wood" | translate}}</span>
+          <div class="underlineWrap">
+            <div class="blue-underline start"></div>
+            <div (click)="testFunction($event)" class="grey-underline"></div>
+          </div>
+        </div>
+
+        <div class="btnWrap" (click)="testFunction($event);changeContent($event)">
+          <span class="rawLink">{{"bio" | translate}}</span>
+          <div class="underlineWrap">
+            <div class="blue-underline"></div>
+            <div (click)="testFunction($event)" class="grey-underline"></div>
+          </div>
+        </div>
+
+        <div class="btnWrap" (click)="testFunction($event);changeContent($event)">
+          <span class="rawLink">{{"build" | translate}}</span>
+          <div class="underlineWrap">
+            <div class="blue-underline"></div>
+            <div (click)=" testFunction($event)" class="grey-underline"></div>
+          </div>
+        </div>
+
+        <div class="btnWrap" (click)="testFunction($event);changeContent($event)">
+          <span class="rawLink">{{"steal" | translate}}</span>
+          <div class="underlineWrap">
+            <div class="blue-underline"></div>
+            <div (click)=" testFunction($event)" class="grey-underline"></div>
+          </div>
+        </div>
+
+        <div class="btnWrap" (click)="testFunction($event);changeContent($event)">
+          <span class="rawLink">{{"tires" | translate}}</span>
+          <div class="underlineWrap">
+            <div class="blue-underline"></div>
+            <div (click)="testFunction($event)" class="grey-underline"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div >
+
+      <div class="content-wrap">
+        <div class="text-wrap content1 ">
+          <span class="text-info ">
+            {{"row-wood-info" | translate}}
+          </span>
+        </div>
+        <div class="img-wrap content1">
+          <img *ngFor="let url of woodImg" [src]="url.woodUrl" [class]="url.position" alt="img" />
+
+        </div>
+
+        <div class="text-wrap content2">
+          <span class="text-info">
+            {{"bio.text.1" | translate}}
+            <br><br>
+            {{"bio.text.2" | translate}}
+            <br><br>
+            {{"bio.text.3" | translate}}
+          </span>
+        </div>
+        <div class="img-wrap content2">
+          <img *ngFor="let urlBio of bioImg" [src]="urlBio.bioUrl" [class]="urlBio.position" alt="img" />
+
+        </div>
+
+        <div class="text-wrap content3">
+          <span class="text-info">
+           {{"row-build-info" | translate}}
+          </span>
+        </div>
+        <div class="img-wrap buildposition content3">
+          <img *ngFor="let urlBuild of buildImg" [src]="urlBuild.buildUrl" [class]="urlBuild.position" alt="img" />
+
+        </div>
+
+
+        <div class="text-wrap content4">
+          <span class="text-info">
+           {{"steal.text.1" | translate}}
+            <br><br>
+            {{"steal.text.2" | translate}}
+            <br><br>
+            {{"steal.text.3" | translate}}
+
+          </span>
+        </div>
+        <div class="img-wrap content4">
+          <img *ngFor="let urlMetal of metalImg" [src]="urlMetal.metalUrl" [class]="urlMetal.position" alt="img" />
+
+        </div>
+
+        <div class="text-wrap content5">
+          <span class="text-info">
+            {{"tires.text.1" | translate}}
+            <br><br>
+            {{"tires.text.2" | translate}}
+            <br><br>
+            {{"tires.text.3" | translate}}
+
+          </span>
+        </div>
+        <div class="tire content5">
+          <img *ngFor="let urlTire of tireImg" [src]="urlTire.tireUrl" [class]="urlTire.position" alt="img" />
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<div class="production-block">
+  <div class="bx--grid">
+    <span class="production-title">Відповідна продукція</span>
+    <div class="card-wrap">
+      <production-card [url]="url" [cardName]="cardName"></production-card>
+      <production-card [url]="url" [cardName]="cardName"></production-card>
+      <production-card [url]="url" [cardName]="cardName"></production-card>
+      <production-card [url]="url" [cardName]="cardName"></production-card>
+
+    </div>
+
+  </div>
+</div>
+<short-form bcgColor="grey" inputColor="dark"></short-form>

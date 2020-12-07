@@ -1,0 +1,39 @@
+<form [formGroup]="myForm">
+   
+    <!-- <mat-form-field [hidden]="true" >
+      <input [hidden]="true" matInput type="number" formControlName="id" >
+  </mat-form-field> -->
+
+    <mat-form-field class="form-group">
+      <mat-label>UA Name :</mat-label>
+      <input matInput formControlName="ua_name">
+    </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field class="form-group">
+      <mat-label>ENG Name :</mat-label>
+      <input matInput formControlName="eng_name">
+    </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field class="form-group">
+      <mat-label>RUS Name :</mat-label>
+      <input matInput formControlName="rus_name">
+    </mat-form-field>
+
+    
+    <br><br>
+  
+    <div class="form-group row">
+      <div class="fin">
+        <button type="button" mat-raised-button color="accent" (click)="onNoClick()">Скасувати</button>
+        <button type="submit" [disabled]="myForm.invalid" mat-raised-button color="primary" (click)="confirmAdd()">Зберегти</button>
+      </div>
+    </div>
+  
+  </form>
+
+
+

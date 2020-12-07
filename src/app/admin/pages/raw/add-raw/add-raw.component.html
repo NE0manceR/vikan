@@ -1,0 +1,222 @@
+<form [formGroup]="myForm">
+  <p class="row-title">Сировина для переробки</p>
+
+  <div class="mobileLinkWrap">
+    <div class="link-wrap">
+      <div class="btnWrap" (click)="contentSwitch = 1;">
+        <span class="rawLink">Назва сировини :</span>
+
+        <input type="text" class="form-control" formControlName="ua_name" placeholder="UA...">
+        <input type="text" class="form-control" formControlName="eng_name" placeholder="ENG...">
+        <input type="text" class="form-control" formControlName="rus_name" placeholder="RUS...">
+
+      </div>
+
+    </div>
+
+    <div>
+      <div>
+        <div class="text-wrap">
+          <span class="text-info">
+            <mat-label>Опис :</mat-label><br>
+            <textarea class="form-control" formControlName="ua_description" matInput placeholder="UA..."></textarea><br>
+            <textarea class="form-control" formControlName="eng_description" matInput
+              placeholder="ENG..."></textarea><br>
+            <textarea class="form-control" formControlName="rus_description" matInput
+              placeholder="RUS..."></textarea><br>
+          </span>
+        </div>
+        <br><br><br>
+        <div class="form-group">
+          <div *ngIf="ImgIcon">
+            <label>
+              <b><label>Теперішня іконка :</label></b>
+            </label>
+            <br>
+            <div class="panel-body">
+              <img src="{{urlToServer}}api/files/{{ImgIcon}}" width="30%">
+            </div>
+          </div>
+          <br>
+          <div>
+            
+            
+            <div class="form-group">
+              <label for="file-upload">Добавити іконку 
+                  <input type="file" id="file-upload" accept="image/*" (change)="selectIcon($event)" />
+                  
+                  <div id="file-upload-filename"></div>
+              </label>
+              <div *ngIf="previewIcons">
+                <img width="10%" [src]="previewIcons" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="img-wrap">
+
+          <div class="form-group">
+            <div *ngIf="ImgP1">
+             
+                <label>Фото 1 :</label>
+             
+              <br>
+              <div class="panel-body">
+                <img src="{{urlToServer}}api/files/{{ImgP1}}">
+              </div>
+            </div>
+            <br>
+            <div>
+              <div class="form-group">
+                <label for="p1">
+                    <input type="file" id="p1" accept="image/*" (change)="selectPhoto1($event)" />
+                    Добавити фото 1
+                    <div id="p1-filename"></div>
+                </label>
+                <div *ngIf="previewPhoto1">
+                  <img [src]="previewPhoto1" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div *ngIf="ImgP2">
+              <label>
+                <b><label>Фото 2 :</label></b>
+              </label>
+              <br>
+              <div class="panel-body">
+                <img src="{{urlToServer}}api/files/{{ImgP2}}">
+              </div>
+            </div>
+            <br>
+            <div>
+              <div class="form-group">
+                <label for="p2">Добавити фото 2
+                    <input type="file" id="p2" accept="image/*" (change)="selectPhoto2($event)" />
+                    <div id="p2-filename"></div>
+                </label>
+                <div *ngIf="previewPhoto2">
+                  <img [src]="previewPhoto2" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div *ngIf="ImgP3">
+              <label>
+                <b><label>Фото 3 :</label></b>
+              </label>
+              <br>
+              <div class="panel-body">
+                <img src="{{urlToServer}}api/files/{{ImgP3}}">
+              </div>
+            </div>
+            <br>
+            <div>
+              <div class="form-group">
+                <label for="p3">Добавити фото 3
+                    <input type="file" id="p3" accept="image/*" (change)="selectPhoto3($event)" />
+                    <div id="p3-filename"></div>
+                </label>
+                <div *ngIf="previewPhoto3">
+                  <img [src]="previewPhoto3" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div *ngIf="ImgP4">
+              <label>
+                <b><label>Фото 4 :</label></b>
+              </label>
+              <br>
+              <div class="panel-body">
+                <img src="{{urlToServer}}api/files/{{ImgP4}}">
+              </div>
+            </div>
+            <br>
+            <div>
+              <div class="form-group">
+                <label for="p4">Добавити фото 4
+                    <input type="file" id="p4" accept="image/*" (change)="selectPhoto4($event)" />
+                    <div id="p4-filename"></div>
+                </label>
+                <div *ngIf="previewPhoto4">
+                  <img [src]="previewPhoto4" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div *ngIf="ImgP5">
+              <label>
+                <b><label>Фото 5 :</label></b>
+              </label>
+              <br>
+              <div class="panel-body">
+                <img src="{{urlToServer}}api/files/{{ImgP5}}">
+              </div>
+            </div>
+            <br>
+            <div>
+              <div class="form-group">
+                <label for="p5">Добавити фото 5
+                    <input type="file" id="p5" accept="image/*" (change)="selectPhoto5($event)" />
+                    <div id="p5-filename"></div>
+                </label>
+                <div *ngIf="previewPhoto5">
+                  <img [src]="previewPhoto5" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div *ngIf="ImgP6">
+              <label>
+                <b><label>Фото 6 :</label></b>
+              </label>
+              <br>
+              <div class="panel-body">
+                <img src="{{urlToServer}}api/files/{{ImgP6}}">
+              </div>
+            </div>
+            <br>
+            <div>
+              <div class="form-group">
+                <label for="p6">Добавити фото 6
+                    <input type="file" id="p6" accept="image/*" (change)="selectPhoto6($event)" />
+                    <div id="p6-filename"></div>
+                </label>
+                <div *ngIf="previewPhoto6">
+                  <img [src]="previewPhoto6" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <div>
+    <div class="fin">
+      
+      <button type="button" mat-raised-button color="accent" (click)="onNoClick()">Скасувати</button>
+      <button type="submit" mat-raised-button color="primary" (click)="confirmAdd()">Зберегти</button>
+    </div>
+  </div>
+
+</form>

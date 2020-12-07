@@ -1,0 +1,167 @@
+.crumb-position {
+  padding-top:26px ;
+}
+
+.main-bcg {
+    background: url(./../../../assets/images/catalog/bcg.png)no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    position: relative;
+
+
+    &-filter {
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-top: 216px;
+        span {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 2.625rem;
+            line-height: 3.125rem;
+            color: white;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.125rem;
+            line-height: 1.375rem;
+            color: white;
+            margin: 16px 0 32px 0;
+        }
+
+    }
+}
+
+.btnConsultation {
+    width: 328px;
+    height: 63px;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 600;
+    font-size:2.625rem;
+    line-height: 3.125rem;
+    padding-bottom: 14px;
+}
+.wrap-text {
+    color: white;
+    display: grid;
+    max-width: 560px;
+    margin-left: 145px;
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
+}
+
+.typeWrap {
+    width: 100%;
+    height: 370px;
+    position: relative;
+
+    &:hover span
+    {
+     background-color: #4488FF;
+ }
+
+    &:hover button {
+        background-color: #0062ff;
+    }
+    &:hover .filter-block {
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+}
+
+.text-style {
+  display: grid;
+  align-items: center;
+  grid-template-columns: max-content;
+  span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    padding:12px 23px  12px 48px;
+  }
+
+}
+
+.catalog-bcg {
+    background-color: #F5F6FA;
+}
+
+.catalog-type {
+    padding: 52px 0 34px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,370px);
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 30px;
+    @media (max-width: 815px)  {
+      padding: 32px 0 34px 0;
+    }
+
+}
+
+.bcgCategory {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.filter-block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: grid;
+    grid-template-rows: 65px 48px;
+    align-content: end;
+    padding-bottom: 20px;
+    row-gap: 8px;
+    transition: 0.3s;
+
+    button {
+        width: 182px;
+        position: absolute;
+        bottom: 20px;
+        justify-self: end;
+    }
+
+
+}
+
+@media(max-width:500px) {
+  .catalog-type {
+    grid-template-columns: repeat(auto-fill, 330px);
+  }
+
+  .btnConsultation {
+    width: 216px !important ;
+    height: 48px !important ;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+  }
+
+  .text-style span {
+    padding: 12px 23px 12px 12px;;
+  }
+
+}

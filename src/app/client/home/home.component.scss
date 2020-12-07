@@ -1,0 +1,501 @@
+.backgroundVideo {
+  min-width: 100%;
+  min-height: 60%;
+  z-index: -2;
+}
+
+.wrapVideo {
+  position: relative;
+  overflow: hidden;
+  height: 700px;
+  z-index: 0;
+}
+
+.aboutBcg {
+  background-color: white !important;
+}
+
+.videoFilter {
+  padding-top: 216px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  top: 0;
+}
+
+.videoTextWrap {
+  max-width: 560px;
+  margin-left: 145px;
+  span {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.625rem;
+    line-height: 3.125rem;
+    color: white;
+  }
+
+  p {
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: white;
+    margin: 16px 0 32px 0;
+  }
+
+  .btnConsultation {
+    width: 328px;
+    height: 63px;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+  }
+}
+
+.textAboutCompany {
+  max-width: 633px;
+  margin-left: 50px;
+}
+
+.boxInfo, .factContent {
+  width: 268px;
+  height: 268px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #a7a7a7;
+  box-sizing: border-box;
+  /* Drop Shadow */
+
+  box-shadow: 0px 34px 65px rgba(0, 0, 0, 0.102);
+}
+
+.aboutCompany {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 80px;
+  column-gap: 150px;
+  padding: 80px 0 80px 0;
+}
+
+.infoAboutCompany {
+  display: grid;
+  grid-template-columns: repeat(3, 268px);
+  transition: 0.4s;
+}
+
+
+.title {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.625rem;
+  line-height: 3.125rem;
+  padding-bottom: 14px;
+}
+
+.textInfo {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.blockName {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.aboutCompanyLink {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.activateLink {
+  border-bottom: 2px solid #0f61fd;
+  padding-bottom: 8px;
+  width: 100%;
+  transition: 0.3s;
+}
+.dectivateLink {
+  border-bottom: 2px solid #0f61fd;
+  padding-bottom: 8px;
+  width: 0;
+  transition: 0.3s;
+}
+.activeText {
+  font-weight: 600;
+}
+
+.deactiveText {
+  font-weight: normal;
+}
+
+
+.linkWrap {
+  margin-bottom: 45px;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  column-gap: 64px;
+}
+
+.firstBlock {
+  display: grid;
+  grid-template-rows: 72px minmax(240px,max-content) 80px;
+  .btnMore {
+    justify-self: end;
+  }
+}
+
+.btnMoreInfo {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  column-gap: 12px;
+  margin-top: 18px;
+  -webkit-transition: 0.3s;
+
+ a {
+   cursor: pointer;
+   align-self: start;
+   position: relative;
+   text-decoration: none;
+   font-family: IBM Plex Sans;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 18px;
+   color: #161616;
+ }
+
+ a:before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  border-bottom: 2px solid #0f61fd;
+  -webkit-transition: 0.3s;
+  top: 14px;
+
+}
+
+ a:hover:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-bottom: 2px solid #0f61fd;
+    -webkit-transition: 0.3s;
+    top: 14px;
+
+ }
+
+}
+
+
+.boxInfo, .factContent {
+  img {
+    width: 100%;
+  }
+}
+
+
+.hide-block {
+  display: none;
+  opacity: 0;
+}
+
+.hide-info {
+  display: none;
+  opacity: 0;
+}
+
+.secondBlock {
+  height: 617px;
+  @media(max-width: 359px) {
+    height:auto;
+  }
+}
+
+
+.boxInfoWrap {
+  display: grid;
+  justify-items: center;
+  row-gap: 20px;
+  grid-template-rows: max-content max-content max-content;
+  text-align: center;
+
+  span:nth-child(1) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.375rem;
+    line-height: 4rem;
+    color: #0043cd;
+  }
+  span:nth-child(2) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    color: #0043cd;
+  }
+  span:nth-child(3) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    color: #383838;
+  }
+}
+
+.aboutTextContent {
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: 47px 14px 0 14px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+.aboutTextContent:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  border: 1px solid #0f61fd;
+  top: 36px;
+}
+
+@media (max-width: 1650px) {
+  // .boxInfo, .factContent {
+  //   width: 200px;
+  //   height: 200px;
+  // }
+  // .infoAboutCompany {
+  //   display: grid;
+  //   grid-template-columns: repeat(auto-fill, 200px);
+  // }
+
+  // .factContent {
+  //   span {
+  //     font-size: 1.1rem;
+  //     line-height: 1.2rem;
+  //   }
+  // }
+
+}
+
+@media (max-width: 1366px) {
+
+  .factContent {
+    span {
+      position: relative;
+      display: block;
+      height: 100%;
+      padding:36px 5px 0 5px;
+      font-family: IBM Plex Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    span::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      border: 1px solid #0f61fd;
+      top: 26px;
+    }
+  }
+
+ .infoAboutCompany {
+  grid-template-columns: repeat(auto-fill, 152px);
+ }
+
+  .boxInfo, .factContent {
+    width: 152px;
+    height: 152px;
+    -webkit-transition: 0.3s;
+  }
+
+  .aboutCompany {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+    column-gap: 75px;
+    padding: 81px  90px 57px 133px;
+  }
+
+  .boxInfoWrap {
+    row-gap: 0;
+
+    span:nth-child(1) {
+      font-family: IBM Plex Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 70px;
+      line-height: 64px;
+      color: #0043CD;
+    }
+
+    span:nth-child(2) {
+      font-family: IBM Plex Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    span:nth-child(3) {
+      font-family: IBM Plex Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      color: #383838;
+    }
+  }
+
+}
+
+@media (max-width: 1050px) {
+  .aboutCompany {
+    grid-template-columns: 1fr ;
+    padding: 32px 90px 58px 134px;
+  }
+
+  .textAboutCompany {
+    margin-left: 0;
+  }
+
+  .firstBlock {
+    margin-bottom: 32px;
+  }
+  .blockName {
+    margin-bottom: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutCompany {
+    grid-template-columns: 1fr ;
+    padding: 32px 0 28px 0;
+  }
+
+  .videoTextWrap {
+    margin-left: 0;
+  }
+
+  .linkWrap {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 2.063rem;
+  }
+  .videoFilter {
+    padding-top: 150px;
+  }
+
+  .videoTextWrap {
+    span {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .btnConsultation {
+    width: 216px !important;
+    height: 48px !important;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem !important;
+    line-height: 1.125rem !important;
+  }
+}
+@media (max-width: 583px) {
+
+  .machineImg {
+    width: 260px !important;
+  }
+
+  .slide {
+    width: 260px !important;
+    transform: translate(0, -320px) !important;
+  }
+
+  .slide {
+    transform: translate(3px, -219px) !important;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .infoAboutCompany {
+    .boxInfo, .factContent {
+      width: 150px;
+      height: 150px;
+    }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    justify-content: center;
+  }
+
+  .boxInfoWrap {
+    row-gap: 0;
+
+    span:nth-child(1) {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 3.8rem;
+      line-height: 4rem;
+      color: #0043cd;
+    }
+    span:nth-child(2) {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.3rem;
+      line-height: 2.25rem;
+      color: #0043cd;
+    }
+    span:nth-child(3) {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 1.375rem;
+    }
+  }
+
+  .factContent {
+    span {
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+<div class="root">
+  <div class="wrapVideo">
+    <!-- <video
+      type="video/mp4"
+      class="backgroundVideo"
+      [muted]="true"
+      autoPlay
+      loop
+      src="./../../../assets/images/home/mainVideo.m4v"
+    ></video> -->
+    <div class="videoFilter">
+      <div class="bx--grid">
+        <div class="videoTextWrap">
+          <span>{{'title.home' | translate}}</span>
+          <p>
+            {{'under.title.text' | translate}}
+          </p>
+          <button (click)="openCallBackModal()" ibmButton="primary" class="btnConsultation">
+            {{'title.home.btn' | translate}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<app-big-home-slider></app-big-home-slider>
+  <div class="aboutBcg">
+    <div class="bx--grid">
+      <div class="aboutCompany">
+        <div class="firstBlock">
+          <p class="blockName">{{"home.about.company.name" | translate}}</p>
+          <div class="textAboutCompany">
+
+            <p class="title">{{"vikan.ukraine" | translate}}</p>
+            <span class="textInfo">{{"home.about.description.1" | translate}}</span>
+
+            <p class="title hide-block">
+              {{"vikan.ukraine2" | translate}}
+            </p>
+            <span class="textInfo hide-block">
+              {{"home.about.description.2" | translate}}
+            </span>
+          </div>
+
+
+          <div class="btnMoreInfo">
+            <a routerLink="/enterprise" routerLinkActive="active">{{"home.about.more" | translate}}</a>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path _ngcontent-hfo-c5="" clip-rule="evenodd"
+                d="M6.6541 7.78918L0.0267129 1.16179L1.18851 0L7.81589 6.62738L7.81914 6.62413L8.98094 7.78592L1.16179 15.6051L0 14.4433L6.6541 7.78918Z"
+                fill="#0F61FD" fill-rule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="secondBlock">
+          <div class="linkWrap">
+            <div>
+              <span [ngClass]="{
+                  activeText: showBlock,
+                  deactiveText: !showBlock
+                }" class="aboutCompanyLink" (click)="showAbout()"
+                (click)="showBlock = true;">{{"home.about.number" | translate}}</span>
+              <div [ngClass]="{
+                  activateLink: showBlock,
+                  dectivateLink: !showBlock
+                }"></div>
+            </div>
+
+            <div>
+              <span [ngClass]="{
+                  activeText: !showBlock,
+                  deactiveText: showBlock
+                }" class="aboutCompanyLink" (click)="showAbout2()"
+                (click)="showBlock = false; ">{{"home.about.facts" | translate}}</span>
+              <div [ngClass]="{
+                  activateLink: !showBlock,
+                  dectivateLink: showBlock
+                }"></div>
+            </div>
+          </div>
+          <div class="infoAboutCompany">
+
+            <div class="boxInfo">
+              <div class="boxInfoWrap">
+                <span>{{"box.year.text.1" | translate}}</span>
+                <span>{{"box.year.text.2" | translate}}</span>
+                <span>{{"box.year.text.3" | translate}}</span>
+              </div>
+            </div>
+
+            <div class="boxInfo">
+              <img src="./../../../assets/images/home/blockImg1.png" alt="img" />
+            </div>
+
+            <div class="boxInfo">
+              <div class="boxInfoWrap">
+                <span>{{"box.year.technics.1" | translate}}</span>
+                <span>{{"box.year.technics.2" | translate}}</span>
+                <span>{{"box.year.technics.3" | translate}}</span>
+              </div>
+            </div>
+
+            <div class="boxInfo">
+              <img src="./../../../assets/images/home/blockImg2.png" alt="img" />
+            </div>
+
+            <div class="boxInfo">
+              <div class="boxInfoWrap">
+                <span>{{"box.year.production.1" | translate}}</span>
+                <span>{{"box.year.production.2" | translate}}</span>
+                <span>{{"box.year.production.3" | translate}}</span>
+              </div>
+            </div>
+
+            <div class="factContent hide-info">
+              <span class="aboutTextContent">{{"box.content.1" | translate}}</span>
+            </div>
+
+            <div class=" factContent hide-info">
+              <span class="aboutTextContent">{{"box.content.2" | translate}}</span>
+            </div>
+
+            <div class=" factContent hide-info">
+              <span class="aboutTextContent">{{"box.content.3" | translate}}</span>
+            </div>
+
+            <div class=" factContent hide-info">
+              <img src="./../../../assets/images/home/blockImg1.png" alt="img" />
+            </div>
+
+            <div class=" factContent hide-info">
+              <span class="aboutTextContent">{{"box.content.4" | translate}}</span>
+            </div>
+
+            <div class=" factContent hide-info">
+              <img src="./../../../assets/images/home/blockImg2.png" alt="img" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-small-slider></app-small-slider>
+  <short-form bcgColor="grey" inputColor="light"></short-form>
+</div>

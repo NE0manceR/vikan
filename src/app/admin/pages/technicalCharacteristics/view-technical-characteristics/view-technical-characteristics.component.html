@@ -1,0 +1,632 @@
+<form [formGroup]="myForm">
+    <h3 class="title">Технічні характеристики моделі :</h3>
+    <br /><br />
+    <div>
+        <div>
+            <h4>Одиниця каталога :</h4>
+            
+            <h5>UA :</h5>
+            <p>{{ myForm.get("ua_type_desc").value }}</p>
+            <br />
+
+            <h5>ENG :</h5>
+            <p>{{ myForm.get("eng_type_desc").value }}</p>
+            <br />
+
+            <h5>RUS :</h5>
+            <p>{{ myForm.get("rus_type_desc").value }}</p>
+        </div>
+
+        <br /><br /><br />
+        <div>
+            <h4>Модель :</h4>
+            <p>{{ myForm.get("ua_type_desc").value }}</p>
+        </div>
+        <br /><br /><br />
+        <div>
+            <h4>Опис моделі :</h4>
+            <br />
+
+            <h5>UA :</h5>
+            <p>{{ myForm.get("ua_description").value }}</p>
+            <br />
+
+            <h5>ENG :</h5>
+            <p>{{ myForm.get("eng_description").value }}</p>
+            <br />
+
+            <h5>RUS :</h5>
+            <p>{{ myForm.get("rus_description").value }}</p>
+        </div>
+
+        <br /><br /><br />
+        <div class="form-group">
+            <div *ngIf="ImgPhoto">
+                <label>
+                    <h4>Головне фото :</h4>
+                </label>
+                <br />
+                <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ ImgPhoto }}" width="30%" />
+                </div>
+            </div>
+            <br />
+        </div>
+
+        <br /><br />
+        <div class="form-group">
+            <div *ngIf="ImgTech">
+                <label>
+                    <h4>Технічне фото :</h4>
+                </label>
+                <br />
+                <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ ImgTech }}" width="30%" />
+                </div>
+            </div>
+            <br />
+        </div>
+
+        <br /><br />
+
+        <div>
+            <h4>Тип машини :</h4>
+            <h5>UA :</h5>
+            <p>{{ myForm.get("ua_type_machine").value }}</p>
+            <br />
+            <h5>ENG :</h5>
+            <p>{{ myForm.get("eng_type_machine").value }}</p>
+            <br />
+            <h5>RUS :</h5>
+            <p>{{ myForm.get("rus_type_machine").value }}</p>
+        </div>
+
+        <br /><br /><br />
+
+        <div>
+            <h4>Продуктивність, м3/год :</h4>
+            <h5>UA :</h5>
+            <p>{{ myForm.get("ua_productivity").value }}</p>
+            <br />
+            <h5>ENG :</h5>
+            <p>{{ myForm.get("eng_productivity").value }}</p>
+            <br />
+            <h5>RUS :</h5>
+            <p>{{ myForm.get("rus_productivity").value }}</p>
+        </div>
+
+        <br /><br /><br />
+
+        <div>
+            <h4>Мотор :</h4>
+
+            <p>{{ myForm.get("motor").value }}</p>
+        </div>
+        <br /><br /><br />
+        <div>
+            <h4>Потужність :</h4>
+
+            <p>{{ myForm.get("power").value }}</p>
+        </div>
+        <br /><br /><br />
+        <div>
+            <h4>Обороти холості, об/хв :</h4>
+
+            <p>{{ myForm.get("idle_speed").value }}</p>
+            <br />
+        </div>
+        <br /><br /><br />
+        <div>
+            <h4>Обороти робочі, об/хв :</h4>
+
+            <p>{{ myForm.get("working_speed").value }}</p>
+        </div>
+        <br /><br /><br />
+        <div>
+            <h4>Тип :</h4>
+            <h5>UA :</h5>
+            <p>{{ myForm.get("ua_type_node").value }}</p>
+            <br />
+            <h5>ENG :</h5>
+            <p>{{ myForm.get("eng_type_node").value }}</p>
+            <br />
+            <h5>RUS :</h5>
+            <p>{{ myForm.get("rus_type_node").value }}</p>
+        </div>
+        <br /><br /><br />
+        <div>
+            <h4>Кількість обертів в автоматичному режимі без матеріалу, об/хв :</h4>
+
+            <p>{{ myForm.get("automatic_no_material").value }}</p>
+        </div>
+        <br /><br /><br />
+        <div>
+            <h4>Діаметр вала,мм :</h4>
+
+            <p>{{ myForm.get("shaft_diameter").value }}</p>
+        </div>
+        <br /><br /><br />
+        <div>
+            <h4>Габаритні розміри в робочому положенні :</h4>
+
+            <h5>Довжина,мм :</h5>
+
+            <p>{{ myForm.get("lenght_work").value }}</p>
+
+            <h5>Висота,мм :</h5>
+
+            <p>{{ myForm.get("height_work").value }}</p>
+
+            <h5>Ширина,мм :</h5>
+
+            <p>{{ myForm.get("width_work").value }}</p>
+        </div>
+        <br /><br /><br />
+        <div>
+            <h4>Габаритні розміри в транспортному положенні :</h4>
+
+            <h5>Довжина,мм :</h5>
+            
+
+            <p>{{ myForm.get("lenght_transport").value }}</p>
+
+            <br />
+            <h5>Висота,мм :</h5>
+            
+
+            <p>{{ myForm.get("height_transport").value }}</p>
+
+            <br />
+            <h5>Ширина,мм :</h5>
+            
+
+            <p>{{ myForm.get("width_transport").value }}</p>
+            
+        </div>
+        <br /> <br /> <br />
+        <div>
+            <h4>Об'єм гідросистеми, л :</h4>
+            
+
+            <p>{{ myForm.get("volume_hydraulic").value }}</p>
+           
+        </div>
+        <br /> <br /> <br />
+        <div>
+            <h4>Максимальний тиск в гідросистемі, бар :</h4>
+           
+
+            <p>{{ myForm.get("max_pressure_hydraulic").value }}</p>
+           
+        </div>
+        <br /> <br /> <br />
+        <div>
+            <h4>Розмір отворів сита, мм :</h4>
+            
+            <p>{{ myForm.get("size_sieve_holes").value }}</p>
+        </div>
+        <br /> <br /> <br />
+        <div>
+            <h4>Розмір вихідної фракції матеріалу, мм :</h4>
+            
+
+            <p>{{ myForm.get("size_org_fraction").value }}</p>
+        </div>
+        <br /> <br /> <br />
+        <div>
+            <h4>Відсоток вихідної фракції матеріалу,що виходить за межі, % :</h4>
+           
+            <p>{{ myForm.get("interest_fraction_out").value }}</p>
+        </div>
+        <br /> <br /> <br />
+        <div>
+            <h4>Маса виробу, т :</h4>
+            
+            <p>{{ myForm.get("product_mass").value }}</p>
+        </div>
+        <br /> <br /> <br />
+        <div>
+            <h4>Опис що знаходиться під характеристиками моделі :</h4>
+            <br />
+
+            <h5>Заголовок 1 UA:</h5>
+
+            <p>{{ myForm.get("ua_desc_title1").value }}</p>
+
+            <br />
+            <h5>Заголовок 1 ENG</h5>
+
+            <p>{{ myForm.get("eng_desc_title1").value }}</p>
+
+            <br />
+            <h5>Заголовок 1 RUS:</h5>
+
+            <p>{{ myForm.get("rus_desc_title1").value }}</p>
+
+            <br /><br />
+
+            <h5>Поле під заголовком 1 UA:</h5>
+
+            <p>{{ myForm.get("ua_desc_under_title1").value }}</p>
+
+            <br />
+            <h5>Поле під заголовком 1 ENG:</h5>
+
+            <p>{{ myForm.get("eng_desc_under_title1").value }}</p>
+
+            <br />
+            <h5>Поле під заголовком 1 RUS:</h5>
+
+            <p>{{ myForm.get("rus_desc_under_title1").value }}</p>
+
+            <br /><br />
+
+            <h5>Опис Заголовка 1 UA:</h5>
+
+            <p>{{ myForm.get("ua_desc_description1").value }}</p>
+
+            <br />
+            <h5>Опис Заголовка 1 ENG:</h5>
+
+            <p>{{ myForm.get("eng_desc_description1").value }}</p>
+
+            <br />
+            <h5>Опис Заголовка 1 RUS:</h5>
+
+            <p>{{ myForm.get("rus_desc_description1").value }}</p>
+
+            <br /><br /><br />
+
+            <h5>Заголовок 2 UA:</h5>
+
+            <p>{{ myForm.get("ua_desc_title2").value }}</p>
+
+            <br />
+            <h5>Заголовок 2 ENG</h5>
+
+            <p>{{ myForm.get("eng_desc_title2").value }}</p>
+
+            <br />
+            <h5>Заголовок 2 RUS:</h5>
+
+            <p>{{ myForm.get("rus_desc_title2").value }}</p>
+
+            <br /><br />
+
+            <h5>Поле під заголовком 2 UA:</h5>
+
+            <p>{{ myForm.get("ua_desc_under_title2").value }}</p>
+
+            <br />
+            <h5>Поле під заголовком 2 ENG:</h5>
+
+            <p>{{ myForm.get("eng_desc_under_title2").value }}</p>
+
+            <br />
+            <h5>Поле під заголовком 2 RUS:</h5>
+
+            <p>{{ myForm.get("rus_desc_under_title2").value }}</p>
+
+            <br /><br />
+
+            <h5>Опис Заголовка 2 UA:</h5>
+
+            <p>{{ myForm.get("ua_desc_description2").value }}</p>
+
+            <br />
+            <h5>Опис Заголовка 2 ENG:</h5>
+
+            <p>{{ myForm.get("eng_desc_description2").value }}</p>
+
+            <br />
+            <h5>Опис Заголовка 2 RUS:</h5>
+
+            <p>{{ myForm.get("rus_desc_description2").value }}</p>
+
+            <br /><br /><br />
+
+            <h5>Заголовок 3 UA:</h5>
+
+            <p>{{ myForm.get("ua_desc_title3").value }}</p>
+
+            <br />
+            <h5>Заголовок 3 ENG</h5>
+
+            <p>{{ myForm.get("eng_desc_title3").value }}</p>
+
+            <br />
+            <h5>Заголовок 3 RUS:</h5>
+
+            <p>{{ myForm.get("rus_desc_title3").value }}</p>
+
+            <br /><br />
+
+            <h5>Поле під заголовком 3 UA:</h5>
+
+            <p>{{ myForm.get("ua_desc_under_title3").value }}</p>
+
+            <br />
+            <h5>Поле під заголовком 3 ENG:</h5>
+
+            <p>{{ myForm.get("eng_desc_under_title3").value }}</p>
+
+            <br />
+            <h5>Поле під заголовком 3 RUS:</h5>
+
+            <p>{{ myForm.get("rus_desc_under_title3").value }}</p>
+
+            <br /><br />
+
+            <h5>Опис Заголовка 3 UA:</h5>
+
+            <p>{{ myForm.get("ua_desc_description3").value }}</p>
+
+            <br />
+            <h5>Опис Заголовка 3 ENG:</h5>
+
+            <p>{{ myForm.get("eng_desc_description3").value }}</p>
+
+            <br />
+            <h5>Опис Заголовка 3 RUS:</h5>
+
+            <p>{{ myForm.get("rus_desc_description3").value }}</p>
+
+            <br /><br /><br />
+
+            <h5>Заголовок 4 UA:</h5>
+
+            <p>{{ myForm.get("ua_desc_title4").value }}</p>
+
+            <br />
+            <h5>Заголовок 4 ENG</h5>
+
+            <p>{{ myForm.get("eng_desc_title4").value }}</p>
+
+            <br />
+            <h5>Заголовок 4 RUS:</h5>
+
+            <p>{{ myForm.get("rus_desc_title4").value }}</p>
+
+            <br /><br />
+
+            <h5>Поле під заголовком 4 UA:</h5>
+
+            <p>{{ myForm.get("ua_desc_under_title4").value }}</p>
+
+            <br />
+            <h5>Поле під заголовком 4 ENG:</h5>
+
+            <p>{{ myForm.get("eng_desc_under_title4").value }}</p>
+
+            <br />
+            <h5>Поле під заголовком 4 RUS:</h5>
+
+            <p>{{ myForm.get("rus_desc_under_title4").value }}</p>
+
+            <br /><br />
+
+            <h5>Опис Заголовка 4 UA:</h5>
+
+            <p>{{ myForm.get("ua_desc_description4").value }}</p>
+
+            <br />
+            <h5>Опис Заголовка 4 ENG:</h5>
+            <p>{{ myForm.get("eng_desc_description4").value }}</p>
+            <br />
+            <h5>Опис Заголовка 4 RUS:</h5>
+            <p>{{ myForm.get("rus_desc_description4").value }}</p>
+
+            <br /><br /><br />
+
+            <h5>Заголовок 5 UA:</h5>
+            <p>{{ myForm.get("ua_desc_title5").value }}</p>
+            <br />
+            <h5>Заголовок 5 ENG</h5>
+
+            <p>{{ myForm.get("eng_desc_title5").value }}</p>
+
+            <br />
+            <h5>Заголовок 5 RUS:</h5>
+
+            <p>{{ myForm.get("rus_desc_title5").value }}</p>
+
+            <br /><br />
+
+            <h5>Поле під заголовком 5 UA:</h5>
+            <p>{{ myForm.get("ua_desc_under_title5").value }}</p>
+            <br />
+            <h5>Поле під заголовком 5 ENG:</h5>
+            <p>{{ myForm.get("eng_desc_under_title5").value }}</p>
+            <br />
+            <h5>Поле під заголовком 5 RUS:</h5>
+            <p>{{ myForm.get("rus_desc_under_title5").value }}</p>
+
+            <br /><br />
+
+            <h5>Опис Заголовка 5 UA:</h5>
+            <p>{{ myForm.get("ua_desc_description5").value }}</p>
+            <br />
+            <h5>Опис Заголовка 5 ENG:</h5>
+            <p>{{ myForm.get("eng_desc_description5").value }}</p>
+            <br />
+            <h5>Опис Заголовка 5 RUS:</h5>
+            <p>{{ myForm.get("rus_desc_description5").value }}</p>
+        </div>
+
+        <br /><br /><br />
+
+        <div>
+            <h4>Сировина :</h4>
+            <br />
+            <h5>Сировина 1 :</h5>
+            <p>{{ myForm.get("raw_id1").value }}</p>
+            <br />
+            <h5>Сировина 2 :</h5>
+            <p>{{ myForm.get("raw_id2").value }}</p>
+            <br />
+            <h5>Сировина 3 :</h5>
+            <p>{{ myForm.get("raw_id3").value }}</p>
+            <br />
+        </div>
+
+        <br /><br /><br />
+
+        <div class="form-group">
+            <div *ngIf="photoGallery1">
+                <label>
+                    <h4>Фото 1 (Галарея) :</h4>
+                </label>
+                <br />
+                <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ photoGallery1 }}" width="30%" />
+                </div>
+            </div>
+            <br />
+        </div>
+
+        <br /><br />
+
+        <div class="form-group">
+            <div *ngIf="photoGallery2">
+                <label>
+                    <h4>Фото 2 (Галарея) :</h4>
+                </label>
+                <br />
+                <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ photoGallery2 }}" width="30%" />
+                </div>
+            </div>
+            <br />
+        </div>
+
+        <br /><br />
+
+        <div class="form-group">
+            <div *ngIf="photoGallery3">
+                <label>
+                    <h4>Фото 3 (Галарея) :</h4>
+                </label>
+                <br />
+                <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ photoGallery3 }}" width="30%" />
+                </div>
+            </div>
+            <br />
+        </div>
+
+        <br /><br />
+
+        <div class="form-group">
+            <div *ngIf="photoGallery4">
+                <label>
+                    <h4>Фото 4 (Галарея) :</h4>
+                </label>
+                <br />
+                <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ photoGallery4 }}" width="30%" />
+                </div>
+            </div>
+            <br />
+        </div>
+
+        <br /><br />
+
+        <div class="form-group">
+            <div *ngIf="photoGallery5">
+                <label>
+                    <h4>Фото 5 (Галарея) :</h4>
+                </label>
+                <br />
+                <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ photoGallery5 }}" width="30%" />
+                </div>
+            </div>
+            <br />
+        </div>
+
+        <br /><br />
+
+        <div class="form-group">
+            <div *ngIf="photoGallery6">
+                <label>
+                    <h4>Фото 6 (Галарея) :</h4>
+                </label>
+                <br />
+                <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ photoGallery6 }}" width="30%" />
+                </div>
+            </div>
+            <br />
+        </div>
+
+        <br /><br />
+
+        <div class="form-group">
+            <div *ngIf="photoGallery7">
+                <label>
+                    <h4>Фото 7 (Галарея) :</h4>
+                </label>
+                <br />
+                <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ photoGallery7 }}" width="30%" />
+                </div>
+            </div>
+            <br />
+        </div>
+
+        <br /><br />
+
+        <div class="form-group">
+            <div *ngIf="photoGallery8">
+                <label>
+                    <h4>Фото 8 (Галарея) :</h4>
+                </label>
+                <br />
+                <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ photoGallery8 }}" width="30%" />
+                </div>
+            </div>
+        </div>
+
+        <br /><br />
+
+        <div class="form-group">
+            <label>
+                <h4>Відео :</h4>
+            </label>
+            <br />
+            <div *ngIf="urlForVideo">
+                <iframe width="560" height="315" [src]="transformToSafeUrl(urlForVideo)" target="_parent"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <br /><br />
+
+        <div>
+                <h4>Рейтинг моделі:</h4>
+                <p>{{ myForm.get("rating").value }}</p>
+        </div>
+
+        <br /><br />
+
+        
+            <h4>Файл PDF:</h4>
+        
+        <div *ngIf="PDF">
+            <span>{{ PDF }}</span>
+            <p>
+                <a href="{{ urlToServer }}api/files/{{ PDF }}" download>Скачати файл</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="fin">
+            <button type="button" mat-raised-button color="accent" (click)="Close()">
+                Закрити
+            </button>
+        </div>
+    </div>
+</form>

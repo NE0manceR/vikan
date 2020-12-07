@@ -1,0 +1,274 @@
+.row-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.625rem;
+    line-height: 2.313rem;
+    text-align: center;
+    padding: 32px 0 42px 0;
+}
+
+.crumb-position {
+  margin-top: 16px;
+
+}
+
+
+::-webkit-scrollbar
+{ width: 0;
+}
+
+.mobileLinkWrap {
+  margin: 0 auto;
+  overflow: scroll;
+  pad: 5px 0;
+}
+
+.bcg-color {
+    background-color: red;
+}
+
+.link-wrap {
+    display: grid;
+    grid-template-columns: repeat(5,max-content);
+    justify-content: center;
+    column-gap: 16px ;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    width: 760px;
+    padding: 0 20px;
+
+    span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.3rem;
+        cursor:pointer;
+    }
+
+    .grey-underline {
+      width: 100%;
+      background-color: #E0E0E0;
+      height: 2px;
+      transition: 0.3s;
+    }
+
+   
+    .blue-underline {
+      width: 0;
+      background-color: #0F61FD;
+      height: 2px;
+      transition: 0.3s;
+    }
+
+    .underlineWrap {
+      display: flex;
+    }
+
+    .start {
+      width: 7000%;
+      background-color: #0F61FD;
+      height: 2px;
+      transition: 0.3s;
+    }
+
+
+}
+
+.bcg-color {
+    background-color: #F5F6FA;
+}
+
+.content-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 63px;
+    column-gap: 36px;
+    align-items: start;
+}
+
+
+
+.text-wrap {
+    padding-left: 76px;
+}
+
+.text-info {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.img-wrap {
+    display: grid;
+    grid-gap: 6px;
+    grid-template-areas:
+    "img5 img5 img1 img2"
+    "img5 img5 img6 img6"
+    "img4 img3 img6 img6" ;
+
+    img {
+        width: 100%;
+    }
+    .img1{
+      grid-area: img1;
+    }
+
+    .img2{
+      grid-area: img2;
+    }
+
+    .img3{
+      grid-area: img3;
+    }
+
+    .img4{
+      grid-area: img4;
+    }
+
+    .img5{
+      grid-area: img5;
+    }
+
+    .img6{
+      grid-area: img6;
+    }
+
+}
+
+.buildposition {
+  display: grid;
+  grid-gap: 6px;
+  align-items: start;
+
+  grid-template-areas:
+  "buildImg3 buildImg3 buildImg4 buildImg4"
+  "buildImg3 buildImg3 buildImg4 buildImg4"
+  "buildImg1 buildImg2 buildImg4 buildImg4"
+  ;
+
+  img {
+      width: 100%;
+  }
+  .buildImg1{
+    grid-area: buildImg1;
+  }
+
+  .buildImg2{
+    grid-area: buildImg2;
+  }
+
+  .buildImg3{
+    grid-area: buildImg3;
+  }
+
+  .buildImg4{
+    grid-area: buildImg4;
+  }
+
+}
+
+.tire {
+  display: grid;
+  grid-gap: 6px;
+  align-items: start;
+  grid-template-areas:
+  "tireImg1  tireImg2 "
+  " tireImg1 tireImg3";
+  img {
+    width: 100%;
+}
+  .tireImg1 {
+    grid-area: tireImg1;
+  }
+  .tireImg2 {
+    grid-area: tireImg2;
+  }
+  .tireImg3 {
+    grid-area: tireImg3;
+  }
+
+}
+
+.card-wrap {
+    display: grid;
+    column-gap: 28px;
+    grid-template-columns: repeat(auto-fill,289px);
+    justify-content: space-around;
+}
+
+.production-title {
+    margin-bottom: 32px;
+    margin-top: 32px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.625rem;
+    line-height: 2.313rem;
+    display: block;
+}
+
+.production-block {
+    padding: 32px 0 85px 0;
+    background-color: white;
+}
+
+.link-postition {
+    display: grid;
+    justify-items: center;
+}
+
+
+@media (max-width:1024px) {
+  .content-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+  .text-wrap {
+    padding-left: 0;
+  }
+
+}
+  @media (max-width:600px) {
+    .img-wrap {
+      grid-template-areas:
+      "img5 img5 "
+      "img1 img2 "
+      "img4 img3 "
+      "img6 img6";
+
+    }
+
+    .buildposition {
+      grid-template-areas:
+      "buildImg3 buildImg3"
+      "buildImg3 buildImg3"
+      "buildImg1 buildImg2"
+      "buildImg4 buildImg4"
+      "buildImg4 buildImg4"
+      "buildImg4 buildImg4";
+    }
+
+    .tire {
+      display: grid;
+      grid-gap: 6px;
+      align-items: start;
+      grid-template-areas:
+      "tireImg3"
+      "tireImg1"
+      "tireImg2";
+    }
+
+}
+
+.start {
+  width: 100%;
+  background-color: #0F61FD;
+  height: 2px;
+  transition: 0.3s;
+}
+
+
+.content2, .content3, .content4, .content5 {
+  display: none;
+}

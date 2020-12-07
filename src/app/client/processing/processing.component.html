@@ -1,0 +1,14 @@
+<div class="root">
+    <div class="blue-border">
+        <img [src]="imgUrl" alt="img">
+    </div>
+    <p class="processing-name">{{name | translate}}</p>
+    <button ibmButton="secondary" routerLink="sort-line">
+        {{"more.details" | translate}}
+        <svg class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.558105 12.42L1.77088 13.6L8.55422 7.00002L1.77088 0.400024L0.558105 1.58002L6.12866 7.00002L0.558105 12.42V12.42Z"
+            fill="white" />
+        </svg>
+      </button>
+</div>

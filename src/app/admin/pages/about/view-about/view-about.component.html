@@ -1,0 +1,264 @@
+
+
+<form [formGroup]="myForm">
+
+  <div class="bx--grid">
+    <div class="aboutCompany">
+      <div class="firstBlock">
+        <div class="form-group">
+          <p >
+            <span>{{myForm.get('ua_title').value}}</span><br>
+            <span>{{myForm.get('eng_title').value}}</span><br>
+            <span>{{myForm.get('rus_title').value}}</span><br>
+            
+          </p>
+        </div>
+        <div class="textAboutCompany">
+          <div class="form-group">
+            <p class="title" *ngIf="showBlock">
+              <span>{{myForm.get('ua_main_title_number').value}}</span><br>
+              <span>{{myForm.get('eng_main_title_number').value}}</span><br>
+              <span>{{myForm.get('rus_main_title_number').value}}</span><br>
+             
+            </p>
+          </div>
+          <span class="textInfo" *ngIf="showBlock">
+            <div class="form-group">
+
+              <p>{{myForm.get('ua_main_text_number').value}}</p><br>
+              <p>{{myForm.get('eng_main_text_number').value}}</p><br>
+              <p>{{myForm.get('rus_main_text_number').value}}</p><br>
+              
+            </div>
+          </span>
+          <div class="form-group">
+            <p class="title" *ngIf="!showBlock">
+              <span>{{myForm.get('ua_main_title_fact').value}}</span><br>
+              <span>{{myForm.get('eng_main_title_fact').value}}</span><br>
+              <span>{{myForm.get('rus_main_title_fact').value}}</span><br>
+            </p>
+          </div>
+          <span class="textInfo" *ngIf="!showBlock">
+            <div class="form-group">
+              <p>{{myForm.get('ua_main_text_fact').value}}</p>
+              <p>{{myForm.get('eng_main_text_fact').value}}</p>
+              <p>{{myForm.get('rus_main_text_fact').value}}</p>
+              
+              
+            </div>
+          </span>
+        </div>
+        <div class="btnMoreInfo">
+          <span>
+            <div class="form-group">
+              <p>{{myForm.get('ua_main_more').value}}</p>
+              <p>{{myForm.get('eng_main_more').value}}</p>
+              <p>{{myForm.get('rus_main_more').value}}</p>
+              
+            </div>
+          </span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path _ngcontent-hfo-c5="" clip-rule="evenodd"
+              d="M6.6541 7.78918L0.0267129 1.16179L1.18851 0L7.81589 6.62738L7.81914 6.62413L8.98094 7.78592L1.16179 15.6051L0 14.4433L6.6541 7.78918Z"
+              fill="#0F61FD" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div>
+        <div class="linkWrap">
+          <div>
+            <span [ngClass]="{
+                activeText: showBlock,
+                deactiveText: !showBlock
+              }" class="aboutCompanyLink" (click)="showBlock = true">Цифри</span>
+            <div [ngClass]="{
+                activateLink: showBlock,
+                dectivateLink: !showBlock
+              }"></div>
+          </div>
+
+          <div>
+            <span [ngClass]="{
+                activeText: !showBlock,
+                deactiveText: showBlock
+              }" class="aboutCompanyLink" (click)="showBlock = false">Факти</span>
+            <div [ngClass]="{
+                activateLink: !showBlock,
+                dectivateLink: showBlock
+              }"></div>
+          </div>
+        </div>
+        <div class="infoAboutCompany" *ngIf="showBlock">
+          <div class="boxInfo">
+            <div class="boxInfoWrap">
+              <span>
+                <div class="form-group">
+                  <p>{{myForm.get('number_field1').value}}</p>
+                  
+                </div>
+              </span>
+              
+              <span>
+                <div class="form-group">
+                  <p>{{myForm.get('number_ua_title1').value}}</p>
+              <p>{{myForm.get('number_eng_title1').value}}</p>
+              <p>{{myForm.get('number_rus_title1').value}}</p>
+                  
+                </div>
+              </span>
+           
+              <span>
+                <div class="form-group">
+                  <p>{{myForm.get('number_ua_text1').value}}</p>
+                  <p>{{myForm.get('number_eng_text1').value}}</p>
+                  <p>{{myForm.get('number_rus_text1').value}}</p>
+                  
+                </div>
+              </span>
+            </div>
+          </div>
+          <div class="boxInfo">
+            <div class="form-group" >
+
+              <img src="{{urlToServer}}api/files/{{numberPhoto1}}" width="30%">
+
+              <!-- <img src="./../../../assets/images/home/blockImg1.png" alt="img" /> -->
+            </div>
+          </div>
+          <div class="boxInfo">
+            <div class="boxInfoWrap">
+              <span>
+                <div class="form-group">
+                  <p>{{myForm.get('number_field2').value}}</p>
+                  
+                </div>
+              </span>
+              <span>
+                <div class="form-group">
+                  <p>{{myForm.get('number_ua_title2').value}}</p>
+                  <p>{{myForm.get('number_eng_title2').value}}</p>
+                  <p>{{myForm.get('number_rus_title2').value}}</p>
+                  
+                </div>
+              </span>
+              <span>
+                <div class="form-group">
+                  <p>{{myForm.get('number_ua_text2').value}}</p>
+                  <p>{{myForm.get('number_eng_text2').value}}</p>
+                  <p>{{myForm.get('number_rus_text2').value}}</p>
+
+                  
+                </div>
+              </span>
+            </div>
+          </div>
+          <div class="boxInfo">
+            <div class="form-group">
+
+              
+              <img src="{{urlToServer}}api/files/{{numberPhoto2}}" width="30%">
+              <!-- <img src="./../../../assets/images/home/blockImg2.png" alt="img" /> -->
+            </div>
+          </div>
+          <div class="boxInfo">
+            <div class="boxInfoWrap">
+              <span>
+                <div class="form-group">
+                  <p>{{myForm.get('number_field3').value}}</p>
+                 
+                </div>
+              </span>
+              <span>
+                <div class="form-group">
+                  <p>{{myForm.get('number_ua_title3').value}}</p>
+                  <p>{{myForm.get('number_eng_title3').value}}</p>
+                  <p>{{myForm.get('number_rus_title3').value}}</p>
+                 
+                </div>
+              </span>
+              <span>
+                <div class="form-group">
+                  <p>{{myForm.get('number_ua_text3').value}}</p>
+                  <p>{{myForm.get('number_eng_text3').value}}</p>
+                  <p>{{myForm.get('number_rus_text3').value}}</p>
+                 
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="infoAboutCompany" *ngIf="!showBlock">
+          <div class="boxInfo factContent">
+            <span>
+              <div class="form-group">
+                <p>{{myForm.get('ua_facts_field1').value}}</p>
+                  <p>{{myForm.get('eng_facts_field1').value}}</p>
+                  <p>{{myForm.get('rus_facts_field1').value}}</p>
+                
+              </div>
+            </span>
+          </div>
+          <div class="boxInfo factContent">
+            <span>
+              <div class="form-group">
+                <p>{{myForm.get('ua_facts_field2').value}}</p>
+                <p>{{myForm.get('eng_facts_field2').value}}</p>
+                <p>{{myForm.get('rus_facts_field2').value}}</p>
+                
+              </div>
+            </span>
+          </div>
+          <div class="boxInfo factContent">
+            <span>
+              <div class="form-group">
+
+                <p>{{myForm.get('ua_facts_field3').value}}</p>
+                <p>{{myForm.get('eng_facts_field3').value}}</p>
+                <p>{{myForm.get('rus_facts_field3').value}}</p>
+               
+              </div>
+            </span>
+          </div>
+          <div class="boxInfo factContent">
+            <div class="form-group">
+
+              <img src="{{urlToServer}}api/files/{{factsPhoto1}}" width="30%">
+
+              <!-- <img src="./../../../assets/images/home/blockImg1.png" alt="img" /> -->
+            </div>
+          </div>
+          <div class="boxInfo factContent">
+            <span>
+              <div class="form-group">
+                <p>{{myForm.get('ua_facts_field4').value}}</p>
+                <p>{{myForm.get('eng_facts_field4').value}}</p>
+                <p>{{myForm.get('rus_facts_field4').value}}</p>
+                
+              </div>
+            </span>
+          </div>
+          <div class="boxInfo factContent">
+            <div class="form-group">
+
+              <img src="{{urlToServer}}api/files/{{factsPhoto2}}" width="30%">
+            
+
+              <!-- <img src="./../../../assets/images/home/blockImg2.png" alt="img" /> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="form-group row">
+    <div class="fin">
+      
+      <button type="button" mat-raised-button color="accent" (click)="Close()">Закрити</button>
+    </div>
+  </div>
+
+</form>

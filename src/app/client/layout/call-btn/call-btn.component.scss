@@ -1,0 +1,36 @@
+
+.call-btn  {
+  width: 162px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #0F61FD;
+  border: none;
+
+  @media (max-width:666px) {
+    font-size: 0.775rem;
+    line-height: 1.125rem;
+    max-width: 118px;
+
+  }
+}
+
+.header-btn {
+  width: 162px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #0F61FD;
+  border: none;
+
+  @media (max-width:666px) {
+    font-size: 0.775rem;
+    line-height: 1.125rem;
+    max-width: 118px;
+    height: 29px;
+
+  }
+
+
+}
+

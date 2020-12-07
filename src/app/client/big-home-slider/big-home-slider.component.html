@@ -1,0 +1,58 @@
+<div (window:load)="autoSlider()" #sliderBcg class="wrap">
+  <div #sliderText class="text-wrap-block">
+    <span>{{setTypeMachine |translate}}</span>
+    <p>{{setSlideText1 | translate}}<br>{{setSlideText2 | translate}}</p>
+    <button class="sliderButton" [ibmButton]="">
+      {{"bigSliderBtn" | translate}}
+      <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M6.6541 7.78918L0.0267129 1.16179L1.18851 0L7.81589 6.62738L7.81914 6.62413L8.98094 7.78592L1.16179 15.6051L0 14.4433L6.6541 7.78918Z"
+              fill="white"/>
+      </svg>
+
+
+    </button>
+  </div>
+
+  <div class="slider-wrap-btn">
+    <div (click)="right()" class="btn-size btn-left"><img src="./../../../assets/images/bigSlider/Vikan%20(Copy)/1.svg"
+                                                          alt="img"></div>
+    <div class="circle-wrap">
+      <div class="dot-position">
+        <svg #circle class="blue-circle">
+          <circle cx="18" cy="18" r="15"></circle>
+          <circle #blueX cx="18" cy="18" r="15"></circle>
+          <text x="13.5" y="23" class="small">{{sliderNumber}}</text>
+        </svg>
+        <div class="dot-wrap">
+          <div class="dot"></div>
+        </div>
+        <div class="dot-wrap">
+          <div class="dot"></div>
+        </div>
+        <div class="dot-wrap">
+          <div class="dot"></div>
+        </div>
+        <div class="dot-wrap">
+          <div class="dot"></div>
+        </div>
+
+      </div>
+
+    </div>
+    <div (click)="left()" class="btn-size btn-right"><img src="./../../../assets/images/bigSlider/Vikan%20(Copy)/1.svg"
+                                                          alt="img"></div>
+
+  </div>
+
+  <div class="imgWrap">
+    <img #bcgImg class="slider-bcg" [src]="setBcg" alt="img">
+
+
+    <div #sliderMachine class="slider-machine">
+      <img [src]="setMachinePhoto" alt="img">
+    </div>
+
+  </div>
+
+</div>

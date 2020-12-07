@@ -1,0 +1,29 @@
+<div class="grid-container">
+
+    <div *ngFor="let wrapQ of answerQuestion" class="block_width">
+        <div (click)="showAnswer($event)" class="question-wrap">
+          <span class="question-btn ">{{wrapQ.question}}</span>
+          <div class="question-icon">
+            <svg class="svg-wrap" width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg-icon" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.6541 7.78918L0.0267129 1.16179L1.18851 0L7.81589 6.62738L7.81914 6.62413L8.98094 7.78592L1.16179 15.6051L0 14.4433L6.6541 7.78918Z"
+                    fill="black"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="answer">
+            <span>
+              При критичних навантаженнях подрібнювача, спрацьовує запобіжна муфта, або теплове реле, яке допоможе запобігти поломці агрегата (подрібнювача, установки).
+            </span>
+          </div>
+        </div>
+
+        <div class="border-wrap">
+          <div class="grey-border"></div>
+          <div class="blue-border"></div>
+        </div>
+
+    </div>
+`</div>

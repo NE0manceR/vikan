@@ -1,0 +1,70 @@
+<form [formGroup]="myForm">
+   
+    <!-- <mat-form-field >
+      <input matInput type="hidden" formControlName="id" >
+  </mat-form-field> -->
+
+    <mat-form-field class="form-group">
+      <mat-label>Address UA :</mat-label>
+      <input type="text" matInput formControlName="ua_address">
+    </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field class="form-group">
+      <mat-label>Address ENG :</mat-label>
+      <input type="text" matInput formControlName="eng_address">
+    </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field class="form-group">
+      <mat-label>Address RUS :</mat-label>
+      <input type="text" matInput formControlName="rus_address">
+    </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field class="form-group">
+        <mat-label>Mobile :</mat-label>
+        <input type="text" matInput formControlName="contact_mob">
+      </mat-form-field>
+      
+      <br><br>
+
+      <mat-form-field class="form-group">
+        <mat-label>Telefon :</mat-label>
+        <input type="text" matInput formControlName="contact_stac">
+      </mat-form-field>
+      
+      <br><br>
+
+      <mat-form-field class="form-group">
+        <mat-label>Fax :</mat-label>
+        <input type="text" matInput formControlName="contact_fax">
+      </mat-form-field>
+      
+      <br><br>
+
+      <mat-form-field class="form-group">
+        <mat-label>Email :</mat-label>
+        <input type="email" matInput formControlName="email">
+      </mat-form-field>
+      
+      <br><br>
+    
+  
+  
+    
+    <br><br>
+  
+    <div class="form-group row">
+      <div class="fin">
+       
+        <button type="button" mat-raised-button color="accent" (click)="onNoClick()">Скасувати</button>
+        <button type="submit" [disabled]="myForm.invalid" mat-raised-button color="primary" (click)="confirmAdd()">Зберегти</button>
+      </div>
+    </div>
+  
+  </form>
+

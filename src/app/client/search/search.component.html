@@ -1,0 +1,41 @@
+<div class="bx--grid">
+
+  <div class="crumb-position">
+    <ibm-breadcrumb noTrailingSlash="noTrailingSlash">
+      <ibm-breadcrumb-item>
+        <a class="breadcrumb-link-style" routerLink="/">{{"crumb.main" | translate}}</a>
+      </ibm-breadcrumb-item>
+      <ibm-breadcrumb-item current="true">
+        {{"search.placeholder" | translate}}
+      </ibm-breadcrumb-item>
+    </ibm-breadcrumb>
+  </div>
+
+  <p class="search-title">{{"search.title" | translate}}</p>
+  <p class="search-result">{{"result1" | translate}} "<span class="search-text">{{search}}</span>": {{searchNumber}} {{"result2" | translate}}
+  </p>
+  <p class="mashine-result">Подрібнювачі</p>
+  <div class="nashin-block">
+    <production-card url="./../../../assets/images/production-card/card-photo.png" cardName="Card Name"></production-card>
+    <production-card url="./../../../assets/images/production-card/card-photo.png" cardName="Card Name"></production-card>
+    <production-card url="./../../../assets/images/production-card/card-photo.png" cardName="Card Name"></production-card>
+    <production-card url="./../../../assets/images/production-card/card-photo.png" cardName="Card Name"></production-card>
+    <production-card url="./../../../assets/images/production-card/card-photo.png" cardName="Card Name"></production-card>
+    <production-card url="./../../../assets/images/production-card/card-photo.png" cardName="Card Name"></production-card>
+    <production-card url="./../../../assets/images/production-card/card-photo.png" cardName="Card Name"></production-card>
+    <production-card url="./../../../assets/images/production-card/card-photo.png" cardName="Card Name"></production-card>
+  </div>
+
+  <hr>
+
+  <p class="mashine-result">{{"raw.for" | translate}}</p>
+  <div class="processing">
+    <app-processing name="{{'wood' | translate}}"></app-processing>
+    <app-processing name="{{'bio' | translate}}"></app-processing>
+    <app-processing name="{{'build'| translate}}"></app-processing>
+    <app-processing name="{{'steal' | translate}}"></app-processing>
+    <app-processing name="{{'tires' | translate}}"></app-processing>
+  </div>
+
+</div>
+<short-form bcgColor="light"></short-form>

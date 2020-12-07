@@ -1,0 +1,95 @@
+<div class="production-block">
+  <div class="bx--grid ">
+    <div class="crumb-position">
+      <ibm-breadcrumb noTrailingSlash="noTrailingSlash">
+        <ibm-breadcrumb-item>
+          <a class="breadcrumb-link-style" routerLink="/">{{"crumb.main" | translate}}</a>
+        </ibm-breadcrumb-item>
+        <ibm-breadcrumb-item>
+          <a class="breadcrumb-link-style" routerLink="/catalog">{{"catalog" | translate}}</a>
+        </ibm-breadcrumb-item>
+        <ibm-breadcrumb-item current="true">
+          {{"servis.menu.items1" | translate}}
+        </ibm-breadcrumb-item>
+      </ibm-breadcrumb>
+
+    </div>
+    <p class="production-title">{{"servis.menu.items1"| translate}}</p>
+    <p class="text-title">
+      {{"sort.line.about" | translate}}
+    </p>
+
+    <div class="mobileLinkWrap">
+      <div class="link-wrap">
+        <div class="btnWrap" (click)="testFunction($event)">
+          <span class="rawLink">{{"all" | translate}}</span>
+          <div class="underlineWrap">
+            <div class="blue-underline start"></div>
+            <div (click)="testFunction($event)" class="grey-underline"></div>
+          </div>
+        </div>
+
+        <div class="btnWrap" (click)="testFunction($event)">
+          <span class="rawLink">{{"fallenLeaves" | translate}}</span>
+          <div class="underlineWrap">
+            <div class="blue-underline"></div>
+            <div (click)="testFunction($event)" class="grey-underline"></div>
+          </div>
+        </div>
+
+        <div class="btnWrap" (click)="testFunction($event)">
+          <span class="rawLink">{{"wooden" | translate}}</span>
+          <div class="underlineWrap">
+            <div class="blue-underline"></div>
+            <div (click)=" testFunction($event)" class="grey-underline"></div>
+          </div>
+        </div>
+
+        <div class="btnWrap" (click)="testFunction($event)">
+          <span class="rawLink">{{"catalyst" | translate}}</span>
+          <div class="underlineWrap">
+            <div class="blue-underline"></div>
+            <div (click)=" testFunction($event)" class="grey-underline"></div>
+          </div>
+        </div>
+        <div class="btnWrap" (click)="testFunction($event)">
+          <span class="rawLink">{{"rubbish" | translate}}</span>
+          <div class="underlineWrap">
+            <div class="blue-underline"></div>
+            <div (click)=" testFunction($event)" class="grey-underline"></div>
+          </div>
+        </div>
+        <div class="btnWrap" (click)="testFunction($event)">
+          <span class="rawLink">{{"ferroconcrete" | translate}}</span>
+          <div class="underlineWrap">
+            <div class="blue-underline"></div>
+            <div (click)=" testFunction($event)" class="grey-underline"></div>
+          </div>
+        </div>
+        <div class="btnWrap" (click)="testFunction($event)">
+          <span class="rawLink">{{"electronics" | translate}}</span>
+          <div class="underlineWrap">
+            <div class="blue-underline"></div>
+            <div (click)=" testFunction($event)" class="grey-underline"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <production-card [status]="fallenLeaves" [url]="sortLines[0].url" [cardName]="sortLines[0].name" [routLink]="1"></production-card>
+      <production-card [status]="wooden" [url]="sortLines[1].url" [cardName]="sortLines[1].name" [routLink]="2"></production-card>
+      <production-card [status]="wooden" [url]="sortLines[1].url" [cardName]="sortLines[1].name" [routLink]="2"></production-card>
+      <production-card [status]="wooden" [url]="sortLines[1].url" [cardName]="sortLines[1].name" [routLink]="2"></production-card>
+      <production-card [status]="catalyst" [url]="sortLines[1].url" [cardName]="sortLines[2].name" [routLink]="3"></production-card>
+      <production-card [status]="rubbish" [url]="sortLines[1].url" [cardName]="sortLines[3].name" [routLink]="4"></production-card>
+      <production-card [status]="ferroconcrete" [url]="sortLines[1].url" [cardName]="sortLines[4].name" [routLink]="5"></production-card>
+      <production-card [status]="electronics" [url]="sortLines[1].url" [cardName]="sortLines[5].name" [routLink]="6"></production-card>
+      <production-card [status]="electronics" [url]="sortLines[1].url" [cardName]="sortLines[5].name" [routLink]="7"></production-card>
+
+    </div>
+
+  </div>
+</div>
+<short-form bcgColor="grey" inputColor="dark"></short-form>

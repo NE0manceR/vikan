@@ -1,0 +1,47 @@
+// To change the theme uncomment the below import and which ever carbon theme you want to use
+// @import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
+// $carbon--theme: $carbon--theme--g100;
+// $carbon--theme: $carbon--theme--g90;
+// $carbon--theme: $carbon--theme--g10;
+
+@import "~carbon-components/scss/globals/scss/styles";
+
+@import "./assets/scss/carbon-override.scss";
+
+body {
+padding-top: 147px !important;
+background-color: #F5F6FA;
+}
+
+
+@media (max-width:666px) {
+   body {
+    padding-top: 97px !important;
+   }
+}
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.mat-dialog-container {
+   padding: 0 !important;
+   overflow: inherit !important;
+}
+
+.cdk-overlay-0 {
+   width: 320px;
+}
+.breadcrumb-link-style {
+   text-decoration: none;
+   font-family: IBM Plex Sans;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 18px;
+   color: #0F61FD;
+}
+
+.bx--breadcrumb {
+   display: grid;
+   grid-template-columns: max-content max-content max-content max-content;
+
+ }
+

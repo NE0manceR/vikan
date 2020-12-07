@@ -1,0 +1,23 @@
+<div>
+
+    <ul>
+      <li>
+        <div class="three col" (click)="onClickMe()">
+          <div [class.is-active]="layoutService.getShowMenu()" class="hamburger" id="hamburger-1">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </div>
+      </li>
+      <li><a href="admin"> Панель керування</a></li>
+  
+     
+   
+  
+      <div class="right">
+        <button type="button" mat-raised-button color="warn" (click)="signOut()"><b>Вихід</b></button>
+      </div>
+    </ul>
+  </div>
+  

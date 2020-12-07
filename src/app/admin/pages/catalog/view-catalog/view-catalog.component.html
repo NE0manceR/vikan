@@ -1,0 +1,51 @@
+  <h3 class="title">Переглянути : </h3>
+  <br><br>
+  <form [formGroup]="myForm" novalidate>
+  
+    <!-- <div [formGroup]="myForm">
+      <input type="hidden" class="form-control" formControlName="id">
+    </div> -->
+  
+    <div [formGroup]="myForm">
+      <h5>UA :</h5>
+     
+        <p>{{myForm.get('ua_name').value}}</p>
+    
+    </div>
+    <br>
+    <div [formGroup]="myForm">
+     <h5>ENG :</h5>
+    
+        <p>{{myForm.get('eng_name').value}}</p>
+   
+    </div>
+    <br>
+    <div [formGroup]="myForm">
+     <h5>RUS :</h5>
+ 
+        <p> {{myForm.get('rus_name').value}}</p>
+    
+    </div>
+    <br>
+    
+    <div [formGroup]="myForm">
+      <h5>Фото :</h5>
+      <br>
+      <div>
+        <div class="panel-body">
+          <img src="{{urlToServer}}api/files/{{keyImg}}" width="30%">
+        </div>
+      </div>
+  
+    </div>
+   
+  
+    <br><br>
+  
+    <div class="form-group row">
+      <div class="fin">
+        <button type="button" mat-raised-button color="accent" (click)="Close()">Закрити</button>
+      </div>
+    </div>
+  
+  </form>

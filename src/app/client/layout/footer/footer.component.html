@@ -1,0 +1,84 @@
+<div class="footer-bcg">
+  <div class="bx--grid">
+    <div class="footer-wrap">
+      <img class="footer-logo" src="./../../../../assets/images/footer/footerLogo.svg" alt="footerLogo">
+
+      <div class="link-block">
+        <div class="link_wrap">
+          <p (click)="ScrollTo()" routerLink="/catalog" class="footer-link_border">{{"catalog" | translate}}</p>
+          <div class="footer-link-wrap catalog">
+            <div *ngFor="let catalogLink of catalogLink">
+              <a (click)="ScrollTo()" [routerLink]="catalogLink.url">
+                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.785156 10.7425L1.81766 11.775L7.59266 5.99998L1.81766 0.224976L0.785156 1.25748L5.52766 5.99998L0.785156 10.7425Z"
+                    fill="white"/>
+                </svg>
+                <span>{{catalogLink.link | translate}}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="link_wrap">
+          <p (click)="ScrollTo()" routerLink="/raw" class="footer-link_border">{{"raw" | translate}}</p>
+          <div class="footer-link-wrap">
+            <div *ngFor="let rawLink of rawLink">
+              <a (click)="ScrollTo()" [routerLink]="rawLink.url">
+                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.785156 10.7425L1.81766 11.775L7.59266 5.99998L1.81766 0.224976L0.785156 1.25748L5.52766 5.99998L0.785156 10.7425Z"
+                    fill="white"/>
+                </svg>
+                <span>{{rawLink.link | translate}}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="link_wrap">
+          <p (click)="ScrollTo()" routerLink="/service" class="footer-link_border">{{"service" | translate}}</p>
+          <div class="footer-link-wrap">
+            <div *ngFor="let serviceLink of serviceLink">
+              <a (click)="ScrollTo()" [routerLink]="serviceLink.url">
+                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.785156 10.7425L1.81766 11.775L7.59266 5.99998L1.81766 0.224976L0.785156 1.25748L5.52766 5.99998L0.785156 10.7425Z"
+                    fill="white"/>
+                </svg>
+                <span>{{serviceLink.link | translate}}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <button (click)="openCallBackModal()" class="footer-btn">{{"header.btn" | translate}}</button>
+        <div class="phone-wrap">
+          <img src="./../../../../assets/images/footer/footer-phone.svg" alt="phone">
+          <a class="phone-footer" href="tel:+380674711249">+38067 471 12 49</a>
+        </div>
+        <div class="phone-wrap">
+          <img src="./../../../../assets/images/footer/footer-email.svg" alt="phone">
+          <a class="phone-footer" href="tel:+380674711249">+38067 471 12 49</a>
+        </div>
+        <div class="social-wrap">
+          <img src="./../../../../assets/images/footer/footer-youtube.svg" alt="phone">
+          <img src="./../../../../assets/images/footer/footer-facebook.svg" alt="phone">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="under-footer_bcg-color">
+  <div class="bx--grid">
+    <div class="under-footer ">
+      <span>Terms and Conditions</span>
+      <span>Privacy Policy</span>
+      <span>© vikan.com.ua. 2020. Всі права захищені.</span>
+    </div>
+  </div>
+</div>
+

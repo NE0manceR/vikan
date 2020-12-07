@@ -1,0 +1,97 @@
+<div class="header-bcg-blue">
+
+  <div class="bx--grid header-position">
+    <div class="header-contact-wrap">
+      <div class="contact-wrap">
+        <div class="email-icon"></div>
+        <a href="tel:+380674711249">+380674711249</a>
+      </div>
+
+      <div class="contact-wrap mail">
+        <div class="phone-icon"></div>
+        <a href="mailto:vikan.ukraine@gmail.com">vikan.ukraine@gmail.com</a>
+      </div>
+
+      <call-btn class="header-btn"></call-btn>
+
+    </div>
+
+    <div class="lang-switcher">
+      <span (click)="changeLang(0, 'uk')" class="langStyle" [ngClass]="{'active': langs[0] === 'uk'}">UK</span>
+      <span (click)="changeLang(1, 'ru')" class="langStyle" [ngClass]="{'active': langs[1] === 'ru'}">RU</span>
+      <span (click)="changeLang(2, 'en')" class="langStyle" [ngClass]="{'active': langs[2] === 'en'}">EN</span>
+    </div>
+
+  </div>
+</div>
+
+<div  class="header-grey-bcg">
+  <div class="mobile-search-wrap">
+    <div class="mobile-inputMob-wrap">
+      <div class="item-position">
+        <img class="mobSearchIcon" src="./../../../../assets/images/header/search-mob-menu-icon.png" alt="img-search">
+        <input (keyup)="showClearIcon()" (blur)="hideMobSearch()" #mobInput type="text">
+        <img (click)="clearInput()" #clearIcon class="clearIcon"
+             src="./../../../../assets/images/header/close-search-mob-menu-icon.png" alt="img-clear">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bx--grid grey-content-position">
+    <mobile-menu class="burger-menu"></mobile-menu>
+    <a (click)="resetLinkStatus($event)" class="logo" routerLink="" routerLinkActive="active"></a>
+    <div class="nav-wrap">
+      <div (window:load)="checkPath()" class="link-wrap">
+
+        <a (click)="activeLink($event)" class="linkAction" routerLink="/enterprise" routerLinkActive="active"><span
+          class="link-underline"> {{'enterprise' | translate}}</span></a>
+        <a (click)="activeLink($event)" class="linkAction" (mouseover)="showCatalog()" (mouseout)="hideCatalog()"
+           routerLink="/catalog" routerLinkActive="active"><span
+          class="link-underline">{{'catalog' | translate}}</span></a>
+        <a (click)="activeLink($event)" class="linkAction" routerLink="/raw" routerLinkActive="active"><span
+          class="link-underline">{{'raw' | translate}}</span></a>
+        <a (click)="activeLink($event)" class="linkAction" routerLink="/service" routerLinkActive="active"><span
+          class="link-underline">{{'service' | translate}}</span></a>
+        <a (click)="activeLink($event)" class="linkAction" routerLink="/faq" routerLinkActive="active"><span
+          class="link-underline">{{'faq' | translate}}</span></a>
+        <a (click)="activeLink($event)" class="linkAction" routerLink="/contacts" routerLinkActive="active"><span
+          class="link-underline">{{'contacts' | translate}}</span></a>
+
+      </div>
+      <ibm-search class="search" [placeholder]="placeholder"></ibm-search>
+
+      <img (click)="showSearch($event)" (mouseout)="hideCatalog()" class="mobile-search-icon"
+           src="./../../../../assets//images/header/search-mobile.svg" alt="img">
+    </div>
+  </div>
+
+</div>
+
+<div (mouseover)="showCatalog()" (mouseout)="hideCatalog()" class="catalog-menu">
+  <div class="catalog-drop-wrap">
+    <span class="bcg-text">{{"servis.menu.bcg.text" | translate}}</span>
+    <div class="catalog-list">
+      <a (mouseover)="changeImg($event)" (mouseout)="resetImg()" class="catalog-item-link"
+         routerLink="/catalog/sort-line">{{"servis.menu.items1" | translate }}</a>
+      <a (mouseover)="changeImg($event)" (mouseout)="resetImg()" class="catalog-item-link"
+         routerLink="/catalog/sort-line">{{"servis.menu.items2" | translate }}</a>
+      <a (mouseover)="changeImg($event)" (mouseout)="resetImg()" class="catalog-item-link"
+         routerLink="/catalog/sort-line">{{"servis.menu.items3" | translate }}</a>
+      <a (mouseover)="changeImg($event)" (mouseout)="resetImg()" class="catalog-item-link"
+         routerLink="/catalog/sort-line">{{"servis.menu.items4" | translate }}</a>
+    </div>
+    <div class="catalog-list">
+      <a (mouseover)="changeImg($event)" (mouseout)="resetImg()" class="catalog-item-link"
+         routerLink="/catalog/sort-line">{{"restoration" | translate }}
+      </a>
+      <a (mouseover)="changeImg($event)" (mouseout)="resetImg()" class="catalog-item-link"
+         routerLink="">{{"restoration2" | translate }}
+      </a>
+
+    </div>
+
+    <img class="catalog-menu-img" [src]="setImg" alt="">
+  </div>
+
+</div>

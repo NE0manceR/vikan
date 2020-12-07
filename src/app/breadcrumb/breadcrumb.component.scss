@@ -1,0 +1,21 @@
+.active {
+    text-decoration: none;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #0F61FD;
+    cursor: pointer;
+}
+
+.de-active {
+    text-decoration: none;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    pointer-events: none;
+}

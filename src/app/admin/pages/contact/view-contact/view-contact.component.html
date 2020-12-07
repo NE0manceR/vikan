@@ -1,0 +1,57 @@
+<h3 class="title">Переглянути</h3>
+<br /><br />
+<form [formGroup]="myForm" novalidate>
+  <!-- <div [formGroup]="myForm">
+      <input type="hidden" class="form-control" formControlName="id">
+    </div> -->
+  <div [formGroup]="myForm">
+    <h5>ua_address :</h5>
+    <p>{{ myForm.get("ua_address").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>eng_address :</h5>
+    <p>{{ myForm.get("eng_address").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>rus_address :</h5>
+    <p>{{ myForm.get("rus_address").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>rus_address :</h5>
+    <p>{{ myForm.get("rus_address").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>contact_mob :</h5>
+    <p>{{ myForm.get("contact_mob").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>contact_stac :</h5>
+    <p>{{ myForm.get("contact_stac").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>contact_fax :</h5>
+    <p>{{ myForm.get("contact_fax").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>email :</h5>
+    <p>{{ myForm.get("email").value }}</p>
+  </div>
+  <br />
+
+  <br /><br />
+
+  <div class="form-group row">
+    <div class="fin">
+      <button type="button" mat-raised-button color="accent" (click)="Close()">
+        Закрити
+      </button>
+    </div>
+  </div>
+</form>

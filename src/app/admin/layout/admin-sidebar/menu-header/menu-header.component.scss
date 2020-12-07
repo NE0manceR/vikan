@@ -1,0 +1,80 @@
+
+
+.image {
+    width: 60px;
+    position: absolute;
+  }
+  
+  .user-panel {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+    height: 130px;
+    background-color: #202120;
+  }
+  .pull-left {
+    float: left !important;
+  }
+  img {
+    border: 0;
+  }
+  img {
+    vertical-align: middle;
+  }
+  .img-circle {
+    border-radius: 50%;
+  }
+  .user-panel > .image > img {
+    width: 100%;
+    max-width: 45px;
+    height: auto;
+  }
+  .name {
+    margin: 0 20px 10px;
+    color: white;
+  }
+  p {
+    margin: 0 20px 10px;
+    color: green;
+  }
+  
+  .text-success {
+    color: #3c763d;
+  }
+  .user-panel > .info > a > .fa, .user-panel > .info > a > .ion, .user-panel > .info > a > .glyphicon {
+    margin-right: 3px;
+  }
+  .skin-blue .user-panel > .info, .skin-blue .user-panel > .info > a {
+    color: #fff;
+  }
+  .user-panel > .info {
+    /* padding: 5px 5px 5px 15px; */
+    line-height: 1;
+    position: absolute;
+    left: 55px;
+  }
+  #date{
+    padding-left: 28px;
+    display: flex;
+    flex-direction: column;
+    // border-left: 2px solid white;
+  }
+  
+  #hour{
+    font-family: "montserrat-medium";
+    font-size: 24px;
+    color: #A02749;
+  }
+  
+  #month{
+    font-family: "montserrat-bold";
+    font-size: 20px;
+    color: #F1EDE9;
+    
+  }
+  #year{
+    font-family: "montserrat-medium";
+    font-size: 20px;
+    color: #F1EDE9;
+  }

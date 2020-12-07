@@ -1,0 +1,57 @@
+
+.sidebar-nav {
+  padding: 0;
+  list-style: none;
+  transition: all .5s;
+  width: 100%;
+  
+}
+
+  .sidebar-nav li {
+   
+    width: 100%;
+    transition: all .3s;
+  }
+
+
+ 
+  .sidebar-nav, .sidebar-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .sidebar-nav ul li {
+    float: none;
+  }
+
+
+a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding-left: 2em;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+
+}
+#main-item {
+  padding: 10px;
+}
+
+span {
+  padding: 5px;
+ 
+}
+
+a:hover {
+  background-color: #f8f9fa;
+  
+}
+
+#main-item {
+  padding: 0 24px;
+  text-decoration: none;
+}

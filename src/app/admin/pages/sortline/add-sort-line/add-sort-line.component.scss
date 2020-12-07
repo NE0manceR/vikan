@@ -1,0 +1,40 @@
+.mat-raised-button {
+  margin-right: 8px;
+}
+
+.fin{
+ margin:1%;
+ margin-left:70em;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.form-group{
+  margin-top: 2em;
+  margin-left:2em;
+}
+
+.form {
+  display: flex;
+  padding-top: 6px;
+}
+
+.mat-form-field {
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+input:focus+label {
+  outline: 2px solid;
+}
+
+input {
+  max-width: 500px;
+  width: 100%;
+}
+
+mat-form-field {
+  width: 70%;
+}

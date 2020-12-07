@@ -1,0 +1,28 @@
+<h3 class="title">Переглянути :</h3>
+<br /><br />
+<form [formGroup]="myForm" novalidate>
+  <div [formGroup]="myForm">
+    <h5>Email :</h5>
+    <p>{{ myForm.get("email").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>Mobile :</h5>
+    <p>{{ myForm.get("mobile").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>Phone :</h5>
+    <p>{{ myForm.get("phone").value }}</p>
+  </div>
+
+  <br /><br />
+
+  <div class="form-group row">
+    <div class="fin">
+      <button type="button" mat-raised-button color="accent" (click)="Close()">
+        Закрити
+      </button>
+    </div>
+  </div>
+</form>

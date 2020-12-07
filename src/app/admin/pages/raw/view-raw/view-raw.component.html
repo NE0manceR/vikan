@@ -1,0 +1,150 @@
+<form [formGroup]="myForm">
+
+  <h3 class="title">Сировина для переробки</h3>
+  <br><br>
+  <div class="mobileLinkWrap">
+    <div class="link-wrap">
+      <div class="btnWrap" (click)="contentSwitch = 1;>
+        <span class=" rawLink">
+        <h4>Назва сировини :</h4></span><br />
+        <br />
+        <div [formGroup]="myForm">
+          <h5>UA :</h5>
+          <p>{{ myForm.get("ua_name").value }}</p>
+        </div><br />
+        <div [formGroup]="myForm">
+          <h5>ENG :</h5>
+          <p>{{ myForm.get("eng_name").value }}</p>
+        </div><br />
+        <div [formGroup]="myForm">
+          <h5>RUS :</h5>
+          <p>{{ myForm.get("rus_name").value }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <br /><br /><br />
+      <div class="content-wrap">
+        <div class="text-wrap">
+          <span class="text-info">
+            <mat-label [formGroup]="myForm">
+              <h4>Опис :</h4>
+            </mat-label><br /><br>
+            <h5>UA :</h5>
+            <p>{{ myForm.get("ua_description").value }}</p>
+            <br />
+            <h5>ENG :</h5>
+            <p>{{ myForm.get("eng_description").value }}</p>
+            <br />
+            <h5>RUS :</h5>
+            <p>{{ myForm.get("rus_description").value }}</p>
+            <br />
+          </span>
+        </div>
+
+        <br /><br />
+        <div class="form-group">
+          <div *ngIf="ImgIcon">
+            <label>
+              <h4>Іконка :</h4>
+            </label>
+            <br />
+            <div class="panel-body">
+              <img src="{{ urlToServer }}api/files/{{ ImgIcon }}" width="10%" />
+            </div>
+          </div>
+          <br />
+        </div>
+
+        <br /><br />
+        <div class="img-wrap">
+          <div class="form-group">
+            <div *ngIf="ImgP1">
+              <label>
+                <h4>Фото 1 :</h4>
+              </label>
+              <br />
+              <div class="panel-body">
+                <img src="{{ urlToServer }}api/files/{{ ImgP1 }}" width="20%" />
+              </div>
+            </div>
+            <br />
+          </div>
+
+          <div class="form-group">
+            <div *ngIf="ImgP2">
+              <label>
+                <h4>Фото 2 :</h4>
+              </label>
+              <br />
+              <div class="panel-body">
+                <img src="{{ urlToServer }}api/files/{{ ImgP2 }}" width="20%" />
+              </div>
+            </div>
+            <br />
+          </div>
+
+          <div class="form-group">
+            <div *ngIf="ImgP3">
+              <label>
+                <h4>Фото 3 :</h4>
+              </label>
+              <br />
+              <div class="panel-body">
+                <img src="{{ urlToServer }}api/files/{{ ImgP3 }}" width="20%" />
+              </div>
+            </div>
+            <br />
+          </div>
+
+          <div class="form-group">
+            <div *ngIf="ImgP4">
+              <label>
+                <h4>Фото 4 :</h4>
+              </label>
+              <br />
+              <div class="panel-body">
+                <img src="{{ urlToServer }}api/files/{{ ImgP4 }}" width="20%" />
+              </div>
+            </div>
+            <br />
+          </div>
+
+          <div class="form-group">
+            <div *ngIf="ImgP5">
+              <label>
+                <h4>Фото 5 :</h4>
+              </label>
+              <br />
+              <div class="panel-body">
+                <img src="{{ urlToServer }}api/files/{{ ImgP5 }}" width="20%" />
+              </div>
+            </div>
+            <br />
+          </div>
+
+          <div class="form-group">
+            <div *ngIf="ImgP6">
+              <label>
+                <h4>Фото 6 :</h4>
+              </label>
+              <br />
+              <div class="panel-body">
+                <img src="{{ urlToServer }}api/files/{{ ImgP6 }}" width="20%" />
+              </div>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="form-group row">
+    <div class="fin">
+      <button type="button" mat-raised-button color="accent" (click)="Close()">
+        Закрити
+      </button>
+    </div>
+  </div>
+</form>

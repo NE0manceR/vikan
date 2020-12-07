@@ -1,0 +1,38 @@
+<h3 class="title">Переглянути :</h3>
+<br /><br />
+<form [formGroup]="myForm" novalidate>
+  <!-- <div [formGroup]="myForm">
+      <input type="hidden" class="form-control" formControlName="id">
+    </div> -->
+
+  <div [formGroup]="myForm">
+    <h5>Name :</h5>
+    <p>{{ myForm.get("name").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>Phone :</h5>
+    <p>{{ myForm.get("phone").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>Отримано :</h5>
+    <p>{{ myForm.get("createdAt").value | date: "dd-MM-yyyy/HH:mm " }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>Розглянуто :</h5>
+    <p *ngIf="block">{{ block }}</p>
+    <p *ngIf="updatedAt">{{ updatedAt.value | date: "dd-MM-yyyy/HH:mm " }}</p>
+  </div>
+
+  <br /><br />
+
+  <div class="form-group row">
+    <div class="fin">
+      <button type="button" mat-raised-button color="accent" (click)="Close()">
+        Закрити
+      </button>
+    </div>
+  </div>
+</form>

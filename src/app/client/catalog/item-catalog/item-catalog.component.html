@@ -1,0 +1,217 @@
+<div class="root">
+  <div class="bx--grid">
+
+    <div class="crumb-position">
+
+      <ibm-breadcrumb noTrailingSlash="noTrailingSlash">
+        <ibm-breadcrumb-item>
+          <a class="breadcrumb-link-style" routerLink="/">{{"crumb.main" | translate}}</a>
+        </ibm-breadcrumb-item>
+
+        <ibm-breadcrumb-item>
+          <a class="breadcrumb-link-style" routerLink="/catalog">{{"catalog" | translate}}</a>
+        </ibm-breadcrumb-item>
+
+        <ibm-breadcrumb-item>
+          <a class="breadcrumb-link-style" routerLink="/catalog/sort-line">{{"shredders" | translate}}</a>
+        </ibm-breadcrumb-item>
+
+        <ibm-breadcrumb-item current="true">
+          VD-42
+        </ibm-breadcrumb-item>
+      </ibm-breadcrumb>
+    </div>
+
+    <div (window:scroll)="check()" class="machine-wrap">
+      <div class="machine-block">
+        <img
+          class="machine"
+          src="./../../../../assets/images/item-catalog/machine1.png"
+          alt="img"
+        />
+      </div>
+      <div class="machine-text">
+        <span class="type-machine">Подрібнювач </span>
+        <span class="machine-name">VA 5b</span>
+        <span class="short-about"
+        >Подрібнювач VA 5b (з дизельним двигуном) - є обладнанням для
+        подрібнення будівельного (залізобетон, плити перекриття, фундаментні
+        блоки), побутового, промислового сміття.
+      </span>
+
+        <button (click)="openCallBackModal()" ibmButton="primary">Залишити замовлення</button>
+      </div>
+    </div>
+
+    <div class="mobile-wrap">
+      <div class="switch-info-btn">
+        <div class="link-wrap" (click)="changeStyle($event)">
+          <span class="item-Link">{{"sort-line-menu1" | translate}}</span>
+          <div class="item-underline-Wrap">
+            <div class="item-blue-underline"></div>
+            <div (click)="changeStyle($event)" class="item-grey-underline"></div>
+          </div>
+        </div>
+
+        <div class="link-wrap" (click)="changeStyle($event)">
+          <span class="item-Link">{{"sort-line-menu2" | translate}}</span>
+          <div class="item-underline-Wrap">
+            <div class="item-blue-underline"></div>
+            <div (click)="changeStyle($event)" class="item-grey-underline"></div>
+          </div>
+        </div>
+        <div class="link-wrap" (click)="changeStyle($event)">
+          <span class="item-Link">{{"sort-line-menu3" | translate}}</span>
+          <div class="item-underline-Wrap">
+            <div class="item-blue-underline"></div>
+            <div (click)="changeStyle($event)" class="item-grey-underline"></div>
+          </div>
+        </div>
+        <div class="link-wrap" (click)="changeStyle($event)">
+          <span class="item-Link">{{"sort-line-menu4" | translate}}</span>
+          <div class="item-underline-Wrap">
+            <div class="item-blue-underline"></div>
+            <div (click)="changeStyle($event)" class="item-grey-underline"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawing-wrap">
+      <div class="drawing">
+        <span class="drawing-title"> {{"drow-titel" | translate}} <br/>{{"drow-tite2" | translate}}  </span>
+        <img
+          class="drawingImg"
+          src="./../../../../assets/images/item-catalog/draw.png"
+          alt="img"
+        />
+
+        <a
+          class="download-drawing"
+          href="/images/myw3schoolsimage.jpg"
+          download="test"
+        >
+          <img
+            src="./../../../../assets/images/item-catalog/download.svg"
+            alt="img"
+          />
+          <span>download</span>
+        </a>
+      </div>
+      <div class="specifications">
+        <div class="specifications-table">
+          <div class="table-wrap">
+            <div class="table">
+              <span class="title">Тип машини</span>
+              <span>На гісеничному ходу </span>
+              <span class="title">Продуктивність, м3/год</span>
+              <span>До 50 </span>
+              <span class="title">Привід</span>
+              <span></span>
+              <span>Мотор</span>
+              <span>Volvo Penta TAD 542 VE 160 </span>
+              <span>Потужність, кВт / к.с </span>
+              <span>217</span>
+              <span>Обороти робочі, об/хв </span>
+              <span>800</span>
+              <span class="title">Подрібнюючий вузол </span>
+              <span></span>
+              <span>Тип</span>
+              <span>Вали та сита</span>
+              <span
+              >Кількість обертів в автоматичному режимі без матеріалу, об/хв
+            </span>
+              <span>35</span>
+              <span>Діаметр вала, мм </span>
+              <span>680</span>
+              <span class="title">Габаритні разміри в робочому положенні </span>
+              <span></span>
+              <span>Довжина, мм </span>
+              <span>8500</span>
+              <span>Довжина, мм </span>
+              <span>8500</span>
+              <span>Довжина, мм </span>
+              <span>85020</span>
+              <span>Довжина, мм </span>
+              <span>85200</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+              <span>Довжина, мм </span>
+              <span>812500</span>
+
+            </div>
+          </div>
+          <span (click)="checkHeightblock()" class="btn-more" href="#">показати більше</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="white-bcg des-wrap">
+    <div class="bx--grid">
+      <div class="description">
+        <span class="description-title">{{"sort-line-description" | translate}}</span>
+        <div class="description-wrap">
+          <div *ngFor="let des of machineDescription" class="description-box">
+            <p>{{ des.title }}</p>
+            <span class="title-machine">{{ des.title2 }}</span>
+            <span class="desc-machine">{{ des.descriptionAbout }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx--grid size">
+    <div class="processing">
+      <span class="block-title"> {{"sort-line-row" | translate}}</span>
+      <div class="processing-type-block">
+        <app-processing [imgUrl]="urlArray[0]" [name]="nameArray[3]"></app-processing>
+        <app-processing [imgUrl]="urlArray[1]" [name]="nameArray[1]"></app-processing>
+      </div>
+    </div>
+  </div>
+
+  <div class="white-bcg">
+    <div class="bx--grid">
+      <span class="block-title">{{"photo-gallery" | translate}}</span>
+      <div class="photo-galary">
+        <img
+          *ngFor="let photo of photoGalery"
+          class="galery-photo"
+          [src]="photo.photo"
+          alt="img"
+        />
+      </div>
+    </div>
+  </div>
+
+  <short-form></short-form>
+
+</div>

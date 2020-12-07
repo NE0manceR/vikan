@@ -1,0 +1,160 @@
+
+.crumb-position {
+  padding-top: 16px;
+
+}
+
+.input-style {
+    width: 270px;
+    height: 50px;
+    @media(max-width:1200px) {
+      width: 100%;
+    }
+}
+
+.input-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 66px;
+    max-width: 1090px;
+    margin: 0 auto;
+
+    @media(max-width:1200px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+    }
+    @media(max-width:766px) {
+      display: grid;
+      grid-template-columns: 1fr;
+
+    }
+}
+
+
+.input-wrap {
+    display: grid;
+    row-gap: 32px ;
+    margin-bottom: 64px;
+
+    @media(max-width:1200px) {
+      width: 100%;
+    }
+
+}
+
+.textArea {
+    grid-template-rows: 76px;
+    row-gap: 32px;
+    width: 270px;
+    @media(max-width:1200px) {
+      width: 100%;
+
+    }
+}
+
+.contentPosition {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+.title  {
+  font-family: IBM Plex Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 2.625rem;
+line-height: 2.313rem;
+text-align: center;
+margin: 32px 0;
+@media(max-width:800px) {
+  font-size:1.625rem ;
+}
+}
+
+.text-info {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 16px;
+
+  a {
+    text-decoration: none;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #0F61FD;
+  }
+}
+
+.phone {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #0F61FD;
+
+  a {
+    text-decoration: none;
+    color: #0F61FD;
+  }
+
+}
+
+.service-contacts {
+  padding-bottom: 32px;
+}
+
+.input-bcg {
+  background-color: white;
+  padding: 46px 0;
+}
+
+.input-title {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: center;
+  margin-bottom: 26px;
+  @media(max-width:766px) {
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+.btn-size {
+  width: 178px;
+  margin-bottom: 32px;
+}
+
+.underBtn {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+}
+
+.area-size {
+  resize: none;
+  height: 265px;
+}
+
+.necessarily {
+  color: red;
+}

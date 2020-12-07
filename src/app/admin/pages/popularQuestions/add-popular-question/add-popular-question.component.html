@@ -1,0 +1,64 @@
+<form [formGroup]="myForm">
+   
+    <!-- <mat-form-field [hidden]="true" >
+      <input [hidden]="true" matInput type="number" formControlName="id" >
+  </mat-form-field> -->
+
+    <mat-form-field class="form-group">
+      <mat-label>Question UA :</mat-label>
+      <input type="text" matInput formControlName="ua_question">
+    </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field class="form-group">
+        <mat-label>Answear UA :</mat-label>
+        <input type="text" matInput formControlName="ua_answer">
+      </mat-form-field>
+
+      <br><br>
+
+    <mat-form-field class="form-group">
+      <mat-label>Question ENG :</mat-label>
+      <input type="text" matInput formControlName="eng_question">
+    </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field class="form-group">
+        <mat-label>Answear ENG :</mat-label>
+        <input type="text" matInput formControlName="eng_answer">
+      </mat-form-field>
+      
+      <br><br>
+
+    <mat-form-field class="form-group">
+      <mat-label>Question RUS :</mat-label>
+      <input type="text" matInput formControlName="rus_question">
+    </mat-form-field>
+
+      <br><br>
+
+      <mat-form-field class="form-group">
+        <mat-label>Answear RUS :</mat-label>
+        <input type="text" matInput formControlName="rus_answer">
+      </mat-form-field>
+      
+      <br><br>
+
+    
+
+    
+    <br><br>
+  
+    <div class="form-group row">
+      <div class="fin">
+        
+        <button type="button" mat-raised-button color="accent" (click)="onNoClick()">Скасувати</button>
+        <button type="submit" [disabled]="myForm.invalid" mat-raised-button color="primary" (click)="confirmAdd()">Зберегти</button>
+      </div>
+    </div>
+  
+  </form>
+
+

@@ -1,0 +1,28 @@
+.blue-border {
+    width: 158px;
+    height: 158px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid #0f61fd;
+    border-radius: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.processing-name {
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    margin: 16px 0 19px 0;
+}
+
+.root {
+    display: grid;
+    justify-items: center;
+    width: 210px;
+
+}

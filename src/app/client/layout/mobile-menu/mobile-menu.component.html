@@ -1,0 +1,84 @@
+<img (click)="mobileMenuOn = !mobileMenuOn" class="burger-menu"
+  src="./../../../../assets//images/header/burger-menu.svg" alt="img">
+
+
+<div [ngClass]="{ mobileMenuWrap:mobileMenuOn,test:!mobileMenuOn}">
+
+  <div [ngClass]="{ hideCatalog:catalogMenu,showCatalog:!catalogMenu}">
+
+    <div (click)="catalogMenu = !catalogMenu" class="menuList">
+      <div class="itemWrap catalogItem">
+        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M6.6541 7.78918L0.0267129 1.16179L1.18851 0L7.81589 6.62738L7.81914 6.62413L8.98094 7.78592L1.16179 15.6051L0 14.4433L6.6541 7.78918Z"
+            fill="#161616" />
+        </svg>
+        <span>Каталог</span>
+      </div>
+    </div>
+
+    <div routerLink="/catalog/sort-line" class="menuList">
+      <div class="itemWrap"><a (click)="mobileMenuOn = !mobileMenuOn; catalogMenu = !catalogMenu" routerLink="/catalog/sort-line">{{"servis.menu.items1" | translate
+        }}</a></div>
+    </div>
+    <div routerLink="/catalog/sort-line" class="menuList">
+      <div class="itemWrap"><a (click)="mobileMenuOn = !mobileMenuOn; catalogMenu = !catalogMenu" routerLink="/catalog/sort-line">{{"servis.menu.items2" | translate
+        }}</a></div>
+    </div>
+    <div routerLink="/catalog/sort-line" class="menuList">
+      <div class="itemWrap"><a (click)="mobileMenuOn = !mobileMenuOn; catalogMenu = !catalogMenu" routerLink="/catalog/sort-line">{{"servis.menu.items3" | translate
+        }}</a></div>
+    </div>
+    <div routerLink="/catalog/sort-line" class="menuList">
+      <div class="itemWrap"><a (click)="mobileMenuOn = !mobileMenuOn; catalogMenu = !catalogMenu" routerLink="/catalog/sort-line">{{"servis.menu.items4" | translate
+        }}</a></div>
+    </div>
+
+  </div>
+
+  <div class="emailWrap">
+    <div><img src="./../../../../assets/images/header/email.svg" alt="img"><a href="mailto:vikan.ukraine@gmail.com">vikan.ukraine@gmail.com</a></div>
+  </div>
+
+  <div class="menuClose">
+    <svg (click)="mobileMenuOn = !mobileMenuOn" width="16" height="16" viewBox="0 0 16 16" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 1.4L14.6 0L8 6.6L1.4 0L0 1.4L6.6 8L0 14.6L1.4 16L8 9.4L14.6 16L16 14.6L9.4 8L16 1.4Z" fill="black" />
+    </svg>
+    <div class="leftMenuBtn">
+      <button (click)="openCallBackModal()" class="leftMenuBtn" ibmButton="primary">Замовити дзвінок</button>
+    </div>
+  </div>
+
+  <div (click)="mobileMenuOn = !mobileMenuOn" routerLink="/enterprise" routerLinkActive="active" class="menuList">
+    <div class="itemWrap"><span>{{"enterprise" |translate}}</span></div>
+  </div>
+
+  <div (click)="catalogMenu = !catalogMenu" class="menuList">
+    <div class="itemWrap catalogLink">
+      <span>{{"catalog" | translate}}</span>
+      <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M6.6541 7.78918L0.0267129 1.16179L1.18851 0L7.81589 6.62738L7.81914 6.62413L8.98094 7.78592L1.16179 15.6051L0 14.4433L6.6541 7.78918Z"
+          fill="#161616" />
+      </svg>
+    </div>
+  </div>
+
+  <a (click)="mobileMenuOn = !mobileMenuOn" routerLink="/raw" routerLinkActive="active" class="menuList">
+    <div class="itemWrap"><span>{{"raw" | translate}}</span></div>
+  </a>
+
+  <a (click)="mobileMenuOn = !mobileMenuOn" routerLink="/service" class="menuList">
+    <div class="itemWrap"><span>{{ "service"  | translate}}</span></div>
+  </a>
+
+  <a (click)="mobileMenuOn = !mobileMenuOn" routerLink="/faq" class="menuList">
+    <div class="itemWrap"><span>{{"faq" | translate}}</span></div>
+  </a>
+
+  <a (click)="mobileMenuOn = !mobileMenuOn" routerLink="/contacts" class="menuList">
+    <div class="itemWrap"><span>{{"contacts" | translate}}</span></div>
+  </a>
+
+</div>

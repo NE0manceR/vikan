@@ -1,0 +1,48 @@
+<h3 class="title">Переглянути</h3>
+<br /><br />
+<form [formGroup]="myForm" novalidate>
+  <!-- <div [formGroup]="myForm">
+      <input type="hidden" class="form-control" formControlName="id">
+    </div> -->
+
+  <div [formGroup]="myForm">
+    <h5>ua_question :</h5>
+    <p>{{ myForm.get("ua_question").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>ua_answer :</h5>
+    <p>{{ myForm.get("ua_answer").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>eng_question :</h5>
+    <p>{{ myForm.get("eng_question").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>eng_answer :</h5>
+    <p>{{ myForm.get("eng_answer").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>rus_question :</h5>
+    <p>{{ myForm.get("rus_question").value }}</p>
+  </div>
+  <br />
+  <div [formGroup]="myForm">
+    <h5>rus_answer :</h5>
+    <p>{{ myForm.get("rus_answer").value }}</p>
+  </div>
+  <br />
+
+  <br /><br />
+
+  <div class="form-group row">
+    <div class="fin">
+      <button type="button" mat-raised-button color="accent" (click)="Close()">
+        Закрити
+      </button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,43 @@
+.wrapper-admin{
+  margin-top: -147px;
+}
+
+#wrapper {
+    display: flex;
+  }
+  
+  
+  /* Sidebar */
+  #sidebar-wrapper {
+    z-index: 1;
+    width: 0;
+    height: 85vh;
+    overflow-y: auto;
+  
+    opacity: 0.9;
+    transition: all .5s;
+    align-items: center;
+    
+  }
+  
+  /* Main Content */
+  #page-content-wrapper {
+    width: 100%;
+    flex-grow: 1;
+    padding: 15px;
+    transition: all .5s;
+  }
+  
+  #menu-toggle {
+    transition: all .3s;
+    font-size: 2em;
+  }
+  /* Change the width of the sidebar to display it*/
+  #wrapper.menuDisplayed #sidebar-wrapper {
+    width: 300px;
+  }
+  
+  .footer{
+    flex-grow:0;
+  }
+  

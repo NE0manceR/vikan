@@ -1,0 +1,52 @@
+<div class="main-bcg">
+  <div class="main-bcg-filter">
+    <div class="bx--grid">
+      <div class="wrap-text">
+        <span>{{"sort.line" | translate}}</span>
+        <p>
+          {{"catalog.title.text" | translate}}
+        </p>
+        <button (click)="openCallBackModal()" ibmButton="primary" class="btnConsultation">
+          {{"title.home.btn" | translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="catalog-bcg">
+  <div class="bx--grid">
+
+    <div class="crumb-position">
+
+      <ibm-breadcrumb noTrailingSlash="noTrailingSlash">
+        <ibm-breadcrumb-item >
+          <a class="breadcrumb-link-style" routerLink="/">{{"crumb.main" | translate}}</a>
+        </ibm-breadcrumb-item>
+        <ibm-breadcrumb-item current="true">
+          {{"catalog.crumb" | translate}}
+        </ibm-breadcrumb-item>
+      </ibm-breadcrumb>
+    </div>
+
+    <div class="catalog-type">
+
+      <div *ngFor="let card of cardInfo" class="typeWrap">
+        <img class="bcgCategory" [src]="card.img" alt="img">
+        <div class="filter-block">
+          <div class="text-style"><span>{{card.machine | translate}}</span></div>
+          <button ibmButton="secondary" routerLink="sort-line">
+            {{"catalog.crumb" | translate}}
+            <svg class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0.558105 12.42L1.77088 13.6L8.55422 7.00002L1.77088 0.400024L0.558105 1.58002L6.12866 7.00002L0.558105 12.42V12.42Z"
+                fill="white" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<short-form bcgColor="light"></short-form>

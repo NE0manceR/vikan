@@ -1,0 +1,104 @@
+body{
+  padding-top: 0!important;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+  
+      /* Change the link color to #111 (black) on hover */
+      li a:hover {
+        background-color: #111;
+      }
+  
+  #nav{
+    margin-left:110px;
+  }
+  
+  .right {
+    float: right;
+    
+  }
+  .right a{
+    color:red;
+  }
+  
+  
+  #navicon {
+  
+    height: 25px;
+    width: 30px;
+  }
+  
+  
+  /* THREE */
+  
+  .col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+    margin-top: 11px;
+  
+  }
+  
+    .col:first-of-type {
+      margin-left: 0;
+    }
+  
+  .container {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+  }
+  
+  /* CLEARFIX */
+  
+  
+  
+  .hamburger .line {
+    width: 20px;
+    height: 3px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 5px;
+   
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hamburger:hover {
+    cursor: pointer;
+  }
+  /* ONE */
+  
+  #hamburger-1.is-active .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #hamburger-1.is-active .line:nth-child(1) {
+   
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  #hamburger-1.is-active .line:nth-child(3) {
+    
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  

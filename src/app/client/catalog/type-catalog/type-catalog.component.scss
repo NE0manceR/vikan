@@ -1,0 +1,172 @@
+.row-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.625rem;
+  line-height: 2.313rem;
+  text-align: center;
+  padding: 32px 0 42px 0;
+
+}
+
+.bcg-color {
+  background-color: red;
+}
+
+.link-wrap {
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  justify-content: center;
+  column-gap: 16px;
+  margin-bottom: 32px;
+
+  span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    cursor: pointer;
+
+  }
+}
+
+.bcg-color {
+  background-color: #F5F6FA;
+}
+
+.content-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 36px;
+}
+
+.text-wrap {
+
+  padding-left: 76px;
+
+}
+
+.text-info {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+
+}
+
+.img-wrap {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 6px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.card-wrap {
+  -webkit-transition: 0.3s;
+  display: grid;
+  column-gap: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  //grid-template-columns: repeat(auto-fill, 289px);
+  @media(max-width: 662px) {
+    justify-content: center;
+  }
+}
+
+.crumb-position {
+  margin: 32px;
+}
+
+.production-title {
+  display: block;
+  margin-bottom: 32px;
+  text-align: center;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 50px;
+  color: #161616;
+}
+
+.text-title {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #383838;
+  max-width: 608px;
+  margin: 0 auto;
+  margin-bottom: 46px;
+
+}
+
+.production-block {
+  padding: 32px 0;
+  background-color: white;
+}
+
+.link-postition {
+  display: grid;
+  justify-items: center;
+}
+
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.mobileLinkWrap {
+  margin: 0 auto;
+  overflow: scroll;
+  padding: 5px 0;
+}
+
+.link-wrap {
+  display: grid;
+  grid-template-columns: repeat(7, max-content);
+  justify-content: center;
+  column-gap: 16px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  padding: 0 20px;
+
+  span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    cursor: pointer;
+  }
+
+  .grey-underline {
+    width: 100%;
+    background-color: #E0E0E0;
+    height: 2px;
+    transition: 0.3s;
+  }
+
+  .blue-underline {
+    width: 0;
+    background-color: #0F61FD;
+    height: 2px;
+    transition: 0.3s;
+  }
+
+  .underlineWrap {
+    display: flex;
+  }
+
+  .start {
+    width: 7000%;
+    background-color: #0F61FD;
+    height: 2px;
+    transition: 0.3s;
+  }
+
+}
+

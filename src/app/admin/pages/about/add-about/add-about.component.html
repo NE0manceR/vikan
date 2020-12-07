@@ -1,0 +1,441 @@
+<form [formGroup]="myForm">
+  <div class="bx--grid">
+    <div class="aboutCompany">
+      <div class="firstBlock">
+        <div>
+          <p>
+            <mat-form-field class="group">
+              <input type="text" matInput formControlName="ua_title" placeholder="UA : Про Компанію..." />
+            </mat-form-field>
+            <mat-form-field class="group">
+              <input type="text" matInput formControlName="eng_title" placeholder="ENG : About company..." />
+            </mat-form-field>
+            <mat-form-field class="group">
+              <input type="text" matInput formControlName="rus_title" placeholder="RUS : О фирме..." />
+            </mat-form-field>
+          </p>
+        </div>
+        <div class="textAboutCompany">
+
+          <div class="group2">
+            <p class="title" *ngIf="showBlock">
+              <mat-form-field class="group">
+                <input type="text" matInput formControlName="ua_main_title_number"
+                  placeholder="UA : ВІКАН УКРАЇНА..." />
+              </mat-form-field>
+              <mat-form-field class="group">
+                <input type="text" matInput formControlName="eng_main_title_number"
+                  placeholder="ENG : ВІКАН УКРАЇНА..." />
+              </mat-form-field>
+              <mat-form-field class="group">
+                <input type="text" matInput formControlName="rus_main_title_number"
+                  placeholder="RUS : ВІКАН УКРАЇНА..." />
+              </mat-form-field>
+            </p>
+          </div>
+          <span class="textInfo" *ngIf="showBlock">
+            <div class="group3">
+              <mat-form-field class="group">
+                <textarea matInput formControlName="ua_main_text_number" placeholder="UA : Текст..."></textarea>
+              </mat-form-field>
+              <mat-form-field class="group">
+                <textarea matInput formControlName="eng_main_text_number" placeholder="ENG : Текст..."></textarea>
+              </mat-form-field>
+              <mat-form-field class="group">
+                <textarea matInput formControlName="rus_main_text_number" placeholder="RUS : Текст..."></textarea>
+              </mat-form-field>
+            </div>
+          </span>
+          <div>
+            <p class="title" *ngIf="!showBlock">
+              <mat-form-field class="group">
+                <input type="text" matInput formControlName="ua_main_title_fact"
+                  placeholder="UA : Компетентність. Надійність. Успіх..." />
+              </mat-form-field>
+              <mat-form-field class="group">
+                <input type="text" matInput formControlName="eng_main_title_fact"
+                  placeholder="ENG : Компетентність. Надійність. Успіх..." />
+              </mat-form-field>
+              <mat-form-field class="group">
+                <input type="text" matInput formControlName="rus_main_title_fact"
+                  placeholder="RUS : Компетентність. Надійність. Успіх..." />
+              </mat-form-field>
+            </p>
+          </div>
+          <span class="textInfo" *ngIf="!showBlock">
+            <div>
+              <mat-form-field class="group">
+                <textarea type="text" matInput formControlName="ua_main_text_fact"
+                  placeholder="UA : Текст..."></textarea>
+              </mat-form-field>
+              <mat-form-field class="group">
+                <textarea type="text" matInput formControlName="eng_main_text_fact"
+                  placeholder="ENG : Текст..."></textarea>
+              </mat-form-field>
+              <mat-form-field class="group">
+                <textarea type="text" matInput formControlName="rus_main_text_fact"
+                  placeholder="RUS : Текст..."></textarea>
+              </mat-form-field>
+            </div>
+          </span>
+        </div>
+        <br />
+        <div class="btnMoreInfo">
+          <span>
+            <div class="form-group">
+              <mat-form-field class="group">
+                <input type="text" matInput formControlName="ua_main_more" placeholder="Дізнатись більше..." />
+              </mat-form-field>
+              <mat-form-field class="group">
+                <input type="text" matInput formControlName="eng_main_more" placeholder="Learn more..." />
+              </mat-form-field>
+              <mat-form-field class="group">
+                <input type="text" matInput formControlName="rus_main_more" placeholder="Узнать больше..." />
+              </mat-form-field>
+            </div>
+          </span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path _ngcontent-hfo-c5="" clip-rule="evenodd"
+              d="M6.6541 7.78918L0.0267129 1.16179L1.18851 0L7.81589 6.62738L7.81914 6.62413L8.98094 7.78592L1.16179 15.6051L0 14.4433L6.6541 7.78918Z"
+              fill="#0F61FD" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div>
+        <div class="linkWrap">
+          <div>
+            <span [ngClass]="{
+                activeText: showBlock,
+                deactiveText: !showBlock
+              }" class="aboutCompanyLink" (click)="showBlock = true">Цифри</span>
+            <div [ngClass]="{
+                activateLink: showBlock,
+                dectivateLink: !showBlock
+              }"></div>
+          </div>
+
+          <div>
+            <span [ngClass]="{
+                activeText: !showBlock,
+                deactiveText: showBlock
+              }" class="aboutCompanyLink" (click)="showBlock = false">Факти</span>
+            <div [ngClass]="{
+                activateLink: !showBlock,
+                dectivateLink: showBlock
+              }"></div>
+          </div>
+        </div>
+        <div class="infoAboutCompany" *ngIf="showBlock">
+          <div class="boxInfo">
+            <div class="boxInfoWrap">
+              <div class="form-group">
+                <div class="group4">
+                  <mat-form-field>
+                    <input type="number" matInput formControlName="number_field1" placeholder="5..." />
+                  </mat-form-field>
+
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_ua_title1" placeholder="років..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_eng_title1" placeholder="years..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_rus_title1" placeholder="лет..." />
+                  </mat-form-field>
+
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_ua_text1" placeholder="на ринку України..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_eng_text1"
+                      placeholder="on the market Ukraine..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_rus_text1" placeholder="на рынке Украины..." />
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="boxInfo">
+            <div class="form-group">
+              <div *ngIf="NumFoto1">
+
+                <br />
+                <div>
+                  <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ NumFoto1 }}" width="10%" />
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div>
+                <div class="form-group">
+                  <label for="file-upload">Download/Modify
+                    <input type="file" id="file-upload" accept="image/*" (change)="selectNumberPhoto1($event)" />
+
+                    <div id="file-upload-filename"></div>
+                  </label>
+                  <div *ngIf="previewNP1">
+                    <img [src]="previewNP1" width="10%" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="boxInfo">
+            <div class="boxInfoWrap">
+              <div class="form-group">
+                <div class="group4">
+                  <mat-form-field>
+                    <input type="number" matInput formControlName="number_field2" placeholder="100..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_ua_title2" placeholder="одиниць..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_eng_title2" placeholder="units..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_rus_title2" placeholder="единиц..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_ua_text2"
+                      placeholder="виготовленої техніки..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_eng_text2"
+                      placeholder="manufactured equipment..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_rus_text2"
+                      placeholder="изготовленной техники..." />
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="boxInfo">
+            <div class="form-group" >
+              <div *ngIf="NumFoto2">
+               
+                <br />
+                <div>
+                  <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ NumFoto2 }}" width="10%" />
+                  </div>
+                </div>
+              </div>
+
+              <br />
+
+              <div>
+                <div class="form-group">
+                  <label for="file-upload2">Download/Modify
+                    <input type="file" id="file-upload2" accept="image/*" (change)="selectNumberPhoto2($event)" />
+                    <div id="file-upload2-filename"></div>
+                  </label>
+                  <div *ngIf="previewNP2">
+                    <img [src]="previewNP2" width="10%" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="boxInfo">
+            <div class="boxInfoWrap">
+
+              <div class="form-group">
+                <div class="group4">
+                  <mat-form-field>
+                    <input type="number" matInput formControlName="number_field3" placeholder="2..." />
+                  </mat-form-field>
+
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_ua_title3" placeholder="виробництва..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_eng_title3" placeholder="virobition..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_rus_title3" placeholder="производства..." />
+                  </mat-form-field>
+
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_ua_text3" placeholder="у Львові та Києві..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_eng_text3"
+                      placeholder="near Lviv and Kiev..." />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="text" matInput formControlName="number_rus_text3" placeholder="во Львове и Киеве..." />
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="infoAboutCompany" *ngIf="!showBlock">
+          <div class="boxInfo factContent">
+
+            <div class="form-group">
+              <div class="group4">
+                <mat-form-field>
+                  <textarea rows="2" matInput formControlName="ua_facts_field1"
+                    placeholder="ВІКАН УКРАЇНА входить у склад машинобудівельного сектора..."></textarea>
+                </mat-form-field>
+                <mat-form-field>
+                  <textarea rows="2" matInput formControlName="eng_facts_field1"
+                    placeholder="VIKAN UKRAINE is a part of the machine-building sector..."></textarea>
+                </mat-form-field>
+                <mat-form-field>
+                  <textarea rows="2" matInput formControlName="rus_facts_field1"
+                    placeholder="ВИКАН УКРАИНА входит в состав машиностроительного сектора..."></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+
+          </div>
+          <div class="boxInfo factContent">
+
+            <div class="form-group">
+              <div class="group4">
+                <mat-form-field>
+                  <textarea rows="2" matInput formControlName="ua_facts_field2"
+                    placeholder="У 2013 році проведена глобальна реструктуризація збірного виробництва..."></textarea>
+
+                </mat-form-field>
+                <mat-form-field>
+                  <textarea rows="2" matInput formControlName="eng_facts_field2"
+                    placeholder="In 2013, a global restructuring of prefabricated production was carried out..."></textarea>
+
+                </mat-form-field>
+                <mat-form-field>
+                  <textarea rows="2" matInput formControlName="rus_facts_field2"
+                    placeholder="В 2013 году проведена глобальная реструктуризация сборного производства..."></textarea>
+
+                </mat-form-field>
+              </div>
+            </div>
+
+          </div>
+          <div class="boxInfo factContent">
+            
+              <div class="form-group">
+                <div class="group4">
+                  <mat-form-field>
+                <textarea rows="2" matInput formControlName="ua_facts_field3"
+                 placeholder="У 2018 реалізовано проект по модернізаціі збірного виробництва..." ></textarea>
+              
+            </mat-form-field>
+            <mat-form-field>
+                <textarea rows="2" matInput formControlName="eng_facts_field3"
+                 placeholder="In 2018, a project to modernize prefabricated production was implemented..." ></textarea>
+              </mat-form-field>
+              <mat-form-field>
+                <textarea rows="2" matInput formControlName="rus_facts_field3"
+                 placeholder="В 2018 реализован проект по Модернизация сборного производства..." ></textarea>
+              </mat-form-field>
+            </div>
+              </div>
+           
+          </div>
+          <div class="boxInfo factContent">
+            <div class="form-group">
+              <div *ngIf="FacFoto1">
+                
+                <br />
+                <div>
+                  <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ FacFoto1 }}" width="10%" />
+                  </div>
+                </div>
+              </div>
+
+              <br />
+
+              <div class="form-group">
+               
+                  <label for="file-upload3">Download/Modify
+                    <input type="file" id="file-upload3" accept="image/*" (change)="selectFactsPhoto1($event)" />
+                    <div id="file-upload3-filename"></div>
+                  </label>
+                
+                <div *ngIf="previewFP1">
+                  <img [src]="previewFP1" width="10%" />
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="boxInfo factContent">
+       
+              <div class="form-group">
+                <div class="group4">
+                  <mat-form-field>
+                <textarea rows="2" matInput formControlName="ua_facts_field4"
+                  placeholder="У 2018 розпочато виробництво мелопотрібнюваців..." ></textarea>
+                </mat-form-field>
+                <mat-form-field>
+                <textarea rows="2" matInput formControlName="eng_facts_field4"
+                  placeholder="In 2018, the production of small consumers began..." ></textarea>
+                </mat-form-field>
+                <mat-form-field>
+                <textarea rows="2" matInput formControlName="rus_facts_field4"
+                  placeholder="В 2018 начато производство мелопотрибнювацив..." ></textarea>
+                </mat-form-field>
+                </div>
+              </div>
+           
+          </div>
+          <div class="boxInfo factContent">
+            <div class="form-group">
+              <div *ngIf="FacFoto2">
+               
+                <br />
+                <div>
+                  <div class="panel-body">
+                    <img src="{{ urlToServer }}api/files/{{ FacFoto2 }}" width="10%" />
+                  </div>
+                </div>
+              </div>
+
+              <br />
+
+              <div>
+                <div class="form-group">
+                  <label for="file-upload4">Download/Modify
+                    <input type="file" id="file-upload4" accept="image/*" (change)="selectFactsPhoto2($event)" />
+                    <div id="file-upload4-filename"></div>
+                  </label>
+                  <div *ngIf="previewFP2">
+                    <img [src]="previewFP2" width="10%" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br /><br />
+
+ 
+    <div class="fin">
+      <button type="button" mat-raised-button color="accent" (click)="onNoClick()">
+        Скасувати
+      </button>
+      <button type="submit" mat-raised-button color="primary" (click)="confirmAdd()">
+        Зберегти
+      </button>
+    </div>
+ 
+</form>

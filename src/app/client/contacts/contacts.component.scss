@@ -1,0 +1,102 @@
+.crumb-position {
+  padding-top: 32px;
+}
+
+.switch-info {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 16px;
+    justify-content: center;
+    margin-bottom: 42px;
+
+    span {
+        cursor: pointer;
+        display: block;
+        height: 20px;
+    }
+}
+
+.contact-title{
+margin-bottom: 50px;
+font-style: normal;
+font-weight: bold;
+font-size: 2.625rem;
+line-height: 2.313rem;
+text-align: center;
+margin-top: 30px;
+margin-bottom: 42px;
+}
+
+.activlinkContact {
+  border-bottom: 2px solid #0f61fd;
+  width: 100%;
+  transition: 1s;
+  font-weight: 600px;
+}
+.deactivlinkContact {
+  border-bottom: 2px solid #0f61fd;
+  width: 0;
+  transition: 1s;
+}
+
+.activeText {
+  font-weight: 600;
+}
+
+.phone-number {
+  text-decoration: none;
+  color: black;
+}
+
+.deactiveText {
+  font-weight: normal;
+}
+
+.contact-Info-title {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2.3125rem;
+}
+
+.addres {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 32px 0 16px 0;
+  text-align: left;
+}
+
+
+.phone-grid {
+  display: grid ;
+  grid-template-columns: 80px max-content;
+  column-gap: 16px;
+  align-items: center;
+
+  &-text {
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.map {
+  background-color: white;
+  padding: 16px 0 55px 0;
+  margin-top: 40px;
+}
+
+.map-title {
+  margin-bottom: 32px;
+}

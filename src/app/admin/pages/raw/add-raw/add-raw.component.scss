@@ -1,0 +1,327 @@
+.mat-raised-button {
+    margin-right: 8px;
+  }
+
+  .fin{
+   margin:1%;
+   margin-left:70em;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  // .container {
+  //   display: flex;
+  //   flex-direction: column;
+  //   min-width: 450px;
+  // }
+
+  // .container>* {
+  //   width: 100%;
+  // }
+
+  .form {
+    display: flex;
+    padding-top: 6px;
+  }
+
+  .mat-form-field {
+    font-size: 16px;
+    flex-grow: 1;
+  }
+
+  input[type="file"] {
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+  }
+
+  input:focus+label {
+    outline: 2px solid;
+  }
+
+  input {
+
+    max-width: 500px;
+    width: 100%;
+  }
+
+  // mat-form-field {
+  //   width: 100%;
+  // }
+
+  // .container {
+  //   display: flex;
+  //   flex-direction: column;
+  //   min-width: 450px;
+  // }
+
+  // .container>* {
+  //   width: 100%;
+  // }
+
+  .form {
+    display: flex;
+    padding-top: 6px;
+  }
+
+  .mat-form-field {
+    font-size: 16px;
+    flex-grow: 1;
+  }
+
+  // input[type="file"] {
+  //   z-index: -1;
+  //   position: absolute;
+  //   opacity: 0;
+  // }
+
+  // input:focus+label {
+  //   outline: 2px solid;
+  // }
+
+  .row-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.625rem;
+    line-height: 2.313rem;
+    text-align: center;
+    padding: 32px 0 42px 0;
+
+}
+
+.crumsPosition {
+  padding-top: 32px;
+  nav {
+    display: flex !important;
+    flex-wrap:nowrap ;
+  }
+
+}
+
+
+::-webkit-scrollbar
+{ width: 0;
+}
+
+// .mobileLinkWrap {
+//   margin: 0 auto;
+//   overflow: scroll;
+//   pad: 5px 0;
+// }
+
+// .bcg-color {
+//     background-color: red;
+// }
+
+.link-wrap {
+    display: grid;
+    grid-template-columns: repeat(5,max-content);
+    justify-content: center;
+    column-gap: 16px ;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    width: 760px;
+    padding: 0 20px;
+
+    span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.3rem;
+        cursor:pointer;
+    }
+
+    .grey-underline {
+      width: 100%;
+      background-color: #E0E0E0;
+      height: 2px;
+      transition: 0.3s;
+    }
+
+    .blue-underline {
+      width: 0;
+      background-color: #0F61FD;
+      height: 2px;
+      transition: 0.3s;
+    }
+
+    .underlineWrap {
+      display: flex;
+    }
+
+
+
+}
+
+.bcg-color {
+    background-color: #F5F6FA;
+}
+
+.content-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 63px;
+    column-gap: 36px;
+    align-items: start;
+}
+
+.text-wrap {
+    padding-left: 76px;
+}
+
+.text-info {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.img-wrap {
+   display: flex;
+
+}
+
+.buildposition {
+  display: grid;
+  grid-gap: 6px;
+  align-items: start;
+
+  grid-template-areas:
+  "buildImg3 buildImg3 buildImg4 buildImg4"
+  "buildImg3 buildImg3 buildImg4 buildImg4"
+  "buildImg1 buildImg2 buildImg4 buildImg4"
+  ;
+
+  // img {
+  //     width: 100%;
+  // }
+  .buildImg1{
+    grid-area: buildImg1;
+  }
+
+  .buildImg2{
+    grid-area: buildImg2;
+  }
+
+  .buildImg3{
+    grid-area: buildImg3;
+  }
+
+  .buildImg4{
+    grid-area: buildImg4;
+  }
+
+}
+
+.tire {
+  display: grid;
+  grid-gap: 6px;
+  align-items: start;
+  grid-template-areas:
+  "tireImg1  tireImg2 "
+  " tireImg1 tireImg3";
+//   img {
+//     //width: 100%;
+// }
+  .tireImg1 {
+    grid-area: tireImg1;
+  }
+  .tireImg2 {
+    grid-area: tireImg2;
+  }
+  .tireImg3 {
+    grid-area: tireImg3;
+  }
+
+}
+
+
+.card-wrap {
+    display: grid;
+    column-gap: 28px;
+    grid-template-columns: repeat(auto-fill,289px);
+}
+
+.production-title {
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.625rem;
+    line-height: 2.313rem;
+}
+
+.production-block {
+    padding: 32px 0;
+    background-color: white;
+}
+
+.link-postition {
+    display: grid;
+    justify-items: center;
+}
+
+
+@media (max-width:1024px) {
+  .content-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+  .text-wrap {
+    padding-left: 0;
+  }
+
+}
+  @media (max-width:600px) {
+    .img-wrap {
+      grid-template-areas:
+      "img5 img5 "
+      "img1 img2 "
+      "img4 img3 "
+      "img6 img6";
+
+    }
+
+    .buildposition {
+      grid-template-areas:
+      "buildImg3 buildImg3"
+      "buildImg3 buildImg3"
+      "buildImg1 buildImg2"
+      "buildImg4 buildImg4"
+      "buildImg4 buildImg4"
+      "buildImg4 buildImg4";
+    }
+
+    .tire {
+      display: grid;
+      grid-gap: 6px;
+      align-items: start;
+      grid-template-areas:
+      "tireImg3"
+      "tireImg1"
+      "tireImg2";
+    }
+
+}
+
+
+.form-group{
+  width: 150px;
+  height: 200px;
+  overflow: hidden;
+  img {
+    width: 150px;
+    height: 150px;
+  }
+  label {
+    display: block;
+    height: 36px;
+    padding: 12px 15px;
+    background-color: #3f51b5;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+}

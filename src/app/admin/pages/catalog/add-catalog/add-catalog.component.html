@@ -1,0 +1,68 @@
+<form [formGroup]="myForm">
+
+  <!-- <mat-form-field [hidden]="true" >
+      <input [hidden]="true" matInput type="number" formControlName="id" >
+  </mat-form-field> -->
+
+  <mat-form-field class="form-group">
+    <mat-label>Name UA :</mat-label>
+    <input type="text" matInput formControlName="ua_name">
+  </mat-form-field>
+  <br><br>
+  <mat-form-field class="form-group">
+    <mat-label>Name ENG :</mat-label>
+    <input type="text" matInput formControlName="eng_name">
+  </mat-form-field>
+  <br><br>
+  <mat-form-field class="form-group">
+    <mat-label>Name RUS :</mat-label>
+    <input type="text" matInput formControlName="rus_name">
+  </mat-form-field>
+  <br><br>
+
+  <br><br>
+  <div *ngIf="keyImgB">
+    <label class="foto">Теперішнє Фото :</label>
+    <br><br>
+    <div>
+      <div class="panel-body">
+        <img src="{{urlToServer}}api/files/{{keyImgB}}" width="20%" class="foto">
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="foto">
+    <ng-container *ngIf="keyImgB; else content" for="file-upload">Змінити фото :</ng-container>
+    <ng-template #content>
+        <label for="file-upload">Добавити Фото :</label>
+    </ng-template>
+
+
+
+    <div class="form-group">
+      <button mat-raised-button color="primary">
+        <input type="file" id="file-upload" accept="image/*" (change)="selectFile($event)" />
+        <label for="file-upload">Завантажити</label>
+        <div id="file-upload-filename"></div>
+      </button>
+
+      <div *ngIf="previewUrl">
+        <img [src]="previewUrl" width="20%" />
+      </div>
+    </div>
+
+  </div>
+
+  <br><br>
+
+  <div class="form-group row">
+    <div class="fin">
+
+      <button type="button" mat-raised-button color="accent" (click)="onNoClick()">Скасувати</button>
+      <button type="submit" [disabled]="myForm.invalid" mat-raised-button color="primary"
+        (click)="confirmAdd()">Зберегти</button>
+    </div>
+  </div>
+
+</form>

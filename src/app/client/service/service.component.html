@@ -1,0 +1,136 @@
+<div class="bx--grid service-contacts">
+
+  <div class="crumb-position">
+
+    <ibm-breadcrumb noTrailingSlash="noTrailingSlash">
+      <ibm-breadcrumb-item >
+        <a class="breadcrumb-link-style" routerLink="/">{{"crumb.main" | translate}}</a>
+      </ibm-breadcrumb-item>
+      <ibm-breadcrumb-item current="true">
+        {{"service" | translate}}
+      </ibm-breadcrumb-item>
+    </ibm-breadcrumb>
+  </div>
+
+
+  <div class="service-text">
+    <p class="title">{{"service.title" | translate}}</p>
+    <p class="text-info">{{"service.text.info.1" | translate}}
+      <a href="mailto:vikan.ukraine@gmail.com">vikan.ukraine@gmail.com </a>{{"service.text.info.2" | translate}}</p>
+    <p class="phone">{{"service.phone.text" | translate}}<a href="tel:+38 067 6755321"> +38 067 6755321</a>, <a
+      href="tel:+38 (03264) 46984">+38
+      (03264) 46984</a></p>
+  </div>
+</div>
+
+
+<div class="input-bcg">
+  <div class="bx--grid">
+    <p class="input-title">{{"service.form.title" | translate}}</p>
+    <form class="input-block" [formGroup]="serviceForm">
+      <div class="input-wrap">
+        <ibm-label class="test"
+        [invalid]="serviceForm.get('name').invalid && submitedForm"
+        [invalidText]="invalidText">
+          {{"service.form.name" | translate}}<span class="necessarily">*</span>
+          <input
+            class="input-style"
+            ibmText
+
+            [invalid]="serviceForm.get('name').invalid && submitedForm"
+            formControlName="name">
+        </ibm-label>
+        <ibm-label
+        [invalid]="serviceForm.get('phone').invalid && submitedForm"
+        [invalidText]="invalidText">
+          {{"service.form.phone" | translate}}<span class="necessarily">*</span>
+          <input
+            class="input-style"
+            ibmText
+
+            [invalid]="serviceForm.get('phone').invalid && submitedForm"
+            formControlName="phone">
+        </ibm-label
+       >
+        <ibm-label>
+          {{"service.form.country" | translate}}
+          <input class="input-style" ibmText  formControlName="country">
+        </ibm-label>
+        <ibm-label>
+          {{"service.form.street" | translate}}
+          <input class="input-style" ibmText  formControlName="street">
+        </ibm-label>
+      </div>
+      <div class="input-wrap">
+        <ibm-label
+        class="test"
+        [invalid]="serviceForm.get('email').invalid && submitedForm"
+        [invalidText]="invalidText">
+          {{"service.form.email" | translate}}<span class="necessarily">*</span>
+            <input
+              class="input-style"
+              ibmText
+
+              [invalid]="serviceForm.get('email').invalid && submitedForm"
+              formControlName="email">
+        </ibm-label>
+        <ibm-label>
+          {{"service.form.company" |translate}}
+          <input class="input-style" ibmText  formControlName="company">
+        </ibm-label>
+        <ibm-label>
+          {{"service.form.city" | translate}}
+          <input class="input-style" ibmText  formControlName="city">
+        </ibm-label>
+        <ibm-label>
+          {{"service.form.Postcode" | translate}}
+          <input class="input-style" ibmText  formControlName="post">
+        </ibm-label>
+      </div>
+      <div class="input-wrap textArea">
+        <ibm-label
+        class="test"
+        [invalid]="serviceForm.get('theme').invalid && submitedForm"
+        [invalidText]="invalidText">
+          {{"service.form.theme" | translate}}<span class="necessarily">*</span>
+          <input
+            class="input-style"
+            ibmText
+
+            [invalid]="serviceForm.get('theme').invalid && submitedForm"
+            formControlName="theme">
+          </ibm-label>
+
+        <ibm-label [helperText]=""
+        [invalid]="serviceForm.get('massage').invalid && submitedForm"
+        [invalidText]="invalidText">
+          {{"service.form.message" | translate}}<span class="necessarily">*</span>
+          <textarea
+            class="area-size"
+            ibmTextArea
+
+            aria-label="textarea"
+            [invalid]="serviceForm.get('massage').invalid && submitedForm"
+            formControlName="massage">
+          </textarea>
+        </ibm-label>
+      </div>
+
+
+    </form>
+  </div>
+
+  <div class="bx--grid contentPosition">
+
+    <button class="btn-size" ibmButton="primary" (click)="sendForm($event)">
+      {{"service.form.btn" | translate}}
+      <svg class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.7247 7.555L2.7247 2.055C2.63848 2.01189 2.54164 1.99461 2.44584 2.00526C2.35003 2.0159 2.25935 2.05401 2.1847 2.115C2.11341 2.17475 2.0602 2.2532 2.03105 2.34153C2.0019 2.42985 1.99797 2.52456 2.0197 2.615L3.3447 7.5H8.9997V8.5H3.3447L1.9997 13.37C1.97931 13.4455 1.97693 13.5248 1.99275 13.6014C2.00857 13.678 2.04214 13.7499 2.09078 13.8111C2.13941 13.8724 2.20174 13.9214 2.27276 13.9542C2.34379 13.987 2.42151 14.0027 2.4997 14C2.57797 13.9995 2.65504 13.9807 2.7247 13.945L13.7247 8.445C13.8066 8.40304 13.8753 8.3393 13.9233 8.26078C13.9713 8.18226 13.9967 8.09203 13.9967 8C13.9967 7.90798 13.9713 7.81774 13.9233 7.73923C13.8753 7.66071 13.8066 7.59696 13.7247 7.555Z" fill="white"/>
+      </svg>
+    </button>
+
+    <span class="underBtn">{{"service.btn.text" | translate}}</span>
+
+
+  </div>
+</div>

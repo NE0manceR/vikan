@@ -1,0 +1,38 @@
+<div class="form-block">
+  <form class="form-wrap">
+    <div class="title-wrap">
+
+      <span class="title">{{'header.btn' | translate}}</span>
+      <img src="./../../../../assets/images/modal/close.svg" alt="img" (click)="onNoClick()">
+    </div>
+    <span class="form-text">{{"modalText" | translate}}</span>
+    <div class="input-wrap">
+      <ibm-label
+        [invalid]="!name && submitedForm">
+        {{data.name | translate}}
+        <input
+          class="inputStyle"
+          ibmText
+          [(ngModel)]="name"
+          [invalid]="!name && submitedForm"
+          [ngModelOptions]="{standalone: true}"
+        >
+      </ibm-label>
+
+      <ibm-label
+        class="block-phone"
+        [invalid]="!name && submitedForm">
+        {{data.phone | translate}}
+        <input
+          class="inputStyle"
+          ibmText
+          [invalid]="!name && submitedForm"
+          [(ngModel)]="phone"
+          [ngModelOptions]="{standalone: true}">
+      </ibm-label>
+      <button class="modal-btn" (click)="sendData()">{{'header.btn' | translate}}</button>
+
+    </div>
+  </form>
+
+</div>

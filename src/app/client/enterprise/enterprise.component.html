@@ -1,0 +1,49 @@
+
+<div class="mainBcg">
+
+</div>
+
+<div class="history-greyBcg">
+    <div class="bx--grid">
+        <div class="crumb-position">
+
+            <ibm-breadcrumb noTrailingSlash="noTrailingSlash">
+              <ibm-breadcrumb-item >
+                <a class="breadcrumb-link-style" routerLink="/">{{"crumb.main" | translate}}</a>
+              </ibm-breadcrumb-item>
+              <ibm-breadcrumb-item current="true">
+              {{"crumb.enterprise" | translate}}
+              </ibm-breadcrumb-item>
+            </ibm-breadcrumb>
+          </div>
+
+        <div class="grey-wrap">
+            <div class="text-block">
+                <span  class="history-title">{{"history.title" | translate}}</span>
+                <span class="history-text position"> {{"history.p1" | translate}}</span>
+                <br><br>
+                <span class="history-text"> {{"history.p2" | translate}}</span>
+                <br><br>
+                <span class="history-text"> {{"history.p3" | translate}}</span>
+
+            </div>
+
+            <img class="imgWidth" src="./../../../assets/images/enterprise/img1.png" alt="img1">
+        </div>
+    </div>
+</div>
+
+<div class="history-whiteBcg">
+   <div class="bx--grid">
+       <div class="white-wrap">
+        <img class="imgWidth"src="./../../../assets/images/enterprise/img2.png" alt="img2">
+
+        <div class="text-block">
+            <img class="history-logo" src="./../../../assets/images/enterprise/historyLogo.svg" alt="logo">
+            <span class="history-text">{{ "history2" | translate}}</span>
+        </div>
+       </div>
+   </div>
+
+</div>
+<short-form bcgColor = "grey"  inputStyle="inputStyle-light" ></short-form>

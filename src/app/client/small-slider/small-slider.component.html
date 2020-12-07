@@ -1,0 +1,39 @@
+<div class="bcgColor">
+
+  <div class="bx--grid ">
+      <div class="btn-position">
+        <span class="title">Популярні моделі</span>
+
+      <div  class="btn-wrap">
+        <div (click)="prev()" class="slider-btn">
+          <svg width="19" height="30" viewBox="0 0 19 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.888672 26.9385L3.53299 29.5829L18.3233 14.7926L3.53299 0.00231934L0.888672 2.64664L13.0346 14.7926L0.888672 26.9385V26.9385Z" fill="white"/>
+          </svg>
+        </div>
+        <div (click)="next()" class="slider-btn">
+          <svg width="19" height="30" viewBox="0 0 19 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M0.888672 26.9385L3.53299 29.5829L18.3233 14.7926L3.53299 0.00231934L0.888672 2.64664L13.0346 14.7926L0.888672 26.9385V26.9385Z" fill="white"/>
+          </svg>
+        </div>
+      </div>
+      </div>
+  </div>
+
+
+  <div (window:resize)="resetSlider()" class="content">
+    <div class="slide">
+
+      <div [ngStyle]="{transform:setPositon}" *ngFor="let text of mmachineName" class="slide-info">
+        <span>{{text}}</span>
+        <img [src]="mmachineImg" alt="img">
+        <button ibmButton="secondary" class="moreBtn">
+          Деталі
+				<svg class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.32666 12.4199L1.50666 13.5999L8.10666 6.9999L1.50666 0.399902L0.32666 1.5799L5.74666 6.9999L0.32666 12.4199Z" fill="white"/>
+				</svg>
+        </button>
+        <div class="filter"></div>
+      </div>
+    </div>
+  </div>
+</div>

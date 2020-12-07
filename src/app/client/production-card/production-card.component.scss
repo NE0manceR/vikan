@@ -1,0 +1,30 @@
+.card-wrap {
+  width: 289px;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  padding: 22px 0 29px 0;
+  row-gap: 22px;
+  transition: 0.3s;
+
+  img {
+    width: 200px;
+    height: 210px;
+  }
+
+  button {
+    width: 160px;
+    height: 48px;
+  }
+
+  &:hover {
+    box-shadow: (0px 34px 65px rgba(0, 0, 0, 0.100));
+    background-color: white;
+    transform: translateY(-3px);
+  }
+}
+
+.hide {
+  display: none;
+}
+

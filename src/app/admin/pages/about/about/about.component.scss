@@ -1,0 +1,314 @@
+* {
+    margin-bottom: 0;
+  }
+  
+  .adver-place {
+    margin-top: 1.55%;
+  }
+  
+  .adv-body {
+    margin: 0 auto;
+    max-width: 1140px;
+  }
+  
+  .adver-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 12%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .btn-rm {
+    background: none;
+  }
+  
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: center;
+    margin-top: 75px;
+  }
+  
+  .card {
+    display: flex;
+    align-items: center;
+    max-width: 350px;
+    border: none;
+    margin-bottom: 27px;
+  }
+  
+  .blog-color {
+    color: #FA8824;
+  }
+  
+  .read {
+    cursor: pointer;
+  }
+  
+  .card-body {
+    max-width: 1114px;
+    display: flex;
+    flex-direction: column;
+    padding: 23px 16px;
+  }
+  
+  .view {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  
+    .up {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .buttom-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      a {
+        text-decoration: none;
+      }
+  
+      u {
+        text-decoration: none;
+      }
+  
+      u:hover {
+        border-bottom: 2px solid #FA8824;
+      }
+    }
+  }
+  
+  .main-content {
+    font-family: "montserrat-regular";
+    font-size: 14px;
+    max-width: 320px;
+    max-height: 100px;
+    color: black;
+    padding-top: 20px;
+    line-height: 1.25;
+    //обмеження висоти тексту
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+  }
+  
+  .image-container {
+    min-width: 143px;
+    min-height: 143px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .card-title {
+    font-family: "montserrat-bold";
+    font-size: 17px;
+    padding-top: 34px;
+    color: #4B4348;
+  }
+  
+  p {
+    font-family: "montserrat-medium";
+    font-size: 14px;
+  }
+  
+  .custom-pagination {
+    margin: 65px 0 77px;
+    text-align: center;
+  
+    .page-number {
+      display: inline-block;
+      font-family: "montserrat-regular";
+      font-size: 12px;
+      color: #7E787C;
+      margin: 0px 14px;
+      cursor: pointer;
+    }
+  }
+  
+  .current {
+    color: #FA8824 !important;
+  }
+  
+  .arrow {
+    background-color: transparent;
+    outline: none;
+    width: 8px;
+  }
+  
+  .nav {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #CCCCCC;
+  
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 0;
+  
+      p {
+        color: #4B4348;
+        font-family: "montserrat-medium";
+        font-size: 17px;
+      }
+    }
+  
+    .nav-link:hover {
+      p {
+        color: #FA8824;
+      }
+    }
+  
+    .active {
+      p {
+        color: #FA8824;
+      }
+    }
+  }
+  
+  .right {
+    width: 100%;
+    margin-left: 28px;
+    border-bottom: 1px solid #CCCCCC;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "montserrat-medium";
+    font-size: 8px;
+    padding: 8px 5px;
+  
+    .blog-opt {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  
+      li {
+        padding: 0 5px;
+      }
+    }
+  }
+  
+  .prof {
+    font-size: 9px;
+    padding-top: 10px;
+  }
+  
+  .container {
+    padding: 0;
+    margin-top: 54px;
+  }
+  
+  .user-name {
+    font-family: "montserrat-bold";
+  }
+  
+  .nav-item {
+    height: 25px;
+    padding-right: 10px;
+  }
+  
+  .arrow-down {
+    width: 0;
+  }
+  
+  .active {
+    .arrow-down {
+      width: 37px;
+      height: 37px;
+      border-bottom: 1px solid #CCCCCC;
+      border-right: 1px solid #CCCCCC;
+      transform: rotate(45deg);
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .card {
+      max-width: 47%;
+    }
+  
+    .card-title {
+      margin-top: 0;
+    }
+  
+    .read {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .card {
+      max-width: 100%;
+      padding-top: 0;
+    }
+  }
+  
+  @media screen and (max-width: 540px) {
+    .nav {
+      padding-bottom: 3px;
+  
+      .nav-link {
+        p {
+          font-size: 11px;
+        }
+      }
+    }
+  
+    .active {
+      .arrow-down {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  
+    .card-title {
+      font-size: 9px;
+    }
+  
+    .image-container {
+      min-height: 80px;
+    }
+  
+    .main-content {
+      font-size: 8px;
+    }
+  
+    .read {
+      font-size: 7px;
+    }
+  
+    .custom-pagination {
+      margin: 10px 0;
+  
+      .page-number {
+        font-size: 12px;
+        margin: 0px 10px;
+      }
+    }
+  }
+  
+  .mat-raised-button {
+    margin: 2%;
+  }
+  
+  ng-container {
+    margin: 0, 5%;
+  }
